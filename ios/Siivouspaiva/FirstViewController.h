@@ -11,7 +11,6 @@
 
 @interface FirstViewController : UIViewController <MKMapViewDelegate>
 {
-    IBOutlet UIBarButtonItem *refreshButton;
     MKUserLocation *currentUserLocation;
 }
 @property (nonatomic, strong) IBOutlet MKMapView *_mapView;

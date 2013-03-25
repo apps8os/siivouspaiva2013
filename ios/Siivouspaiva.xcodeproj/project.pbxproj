@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F1E233C17007F1D00312AE3 /* user-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233A17007F1D00312AE3 /* user-location.png */; };
 		1F1E233D17007F1D00312AE3 /* user-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233B17007F1D00312AE3 /* user-location@2x.png */; };
-		1F1E233F170086A900312AE3 /* arrest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233E170086A900312AE3 /* arrest.png */; };
 		1F1E234917009AE600312AE3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E234817009AE600312AE3 /* ThirdViewController.m */; };
 		1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */; };
 		1F2878CE16FF478D00929E82 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878B616FF478D00929E82 /* NSObject+SBJson.m */; };
@@ -43,6 +42,14 @@
 		1F5678071700CE0800180A39 /* tabicon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F91700CE0800180A39 /* tabicon-star@2x.png */; };
 		1F56780A1700CED200180A39 /* tabicon-info-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678081700CED200180A39 /* tabicon-info-active.png */; };
 		1F56780B1700CED200180A39 /* tabicon-info-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678091700CED200180A39 /* tabicon-info-active@2x.png */; };
+		1F56780E1700D56200180A39 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F56780C1700D56200180A39 /* map-marker.png */; };
+		1F56780F1700D56200180A39 /* map-marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F56780D1700D56200180A39 /* map-marker@2x.png */; };
+		1F5678141700DAE200180A39 /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678101700DAE200180A39 /* locate.png */; };
+		1F5678151700DAE200180A39 /* locate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678111700DAE200180A39 /* locate@2x.png */; };
+		1F5678161700DAE200180A39 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678121700DAE200180A39 /* reload.png */; };
+		1F5678171700DAE200180A39 /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678131700DAE200180A39 /* reload@2x.png */; };
+		1F56781A1700E05F00180A39 /* siivouspaiva-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678181700E05F00180A39 /* siivouspaiva-logo.png */; };
+		1F56781B1700E05F00180A39 /* siivouspaiva-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
 		1FB3CC5816FE48170020026A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5516FE48170020026A /* Default.png */; };
 		1FB3CC5916FE48170020026A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5616FE48170020026A /* Default@2x.png */; };
@@ -54,11 +61,7 @@
 		1FDC3F8916FD2E8100465AA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3F8816FD2E8100465AA2 /* AppDelegate.m */; };
 		1FDC3F9216FD2E8200465AA2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */; };
 		1FDC3F9516FD2E8200465AA2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */; };
-		1FDC3F9716FD2E8200465AA2 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9616FD2E8200465AA2 /* first.png */; };
-		1FDC3F9916FD2E8200465AA2 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9816FD2E8200465AA2 /* first@2x.png */; };
 		1FDC3F9C16FD2E8200465AA2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */; };
-		1FDC3F9E16FD2E8200465AA2 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9D16FD2E8200465AA2 /* second.png */; };
-		1FDC3FA016FD2E8200465AA2 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9F16FD2E8200465AA2 /* second@2x.png */; };
 		1FDC3FA816FD2ED600465AA2 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3FA616FD2ED600465AA2 /* MyLocation.m */; };
 		1FDC3FD616FE220300465AA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD516FE220300465AA2 /* CoreLocation.framework */; };
 		1FDC3FD816FE220900465AA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD716FE220900465AA2 /* MapKit.framework */; };
@@ -67,7 +70,6 @@
 /* Begin PBXFileReference section */
 		1F1E233A17007F1D00312AE3 /* user-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-location.png"; path = "Siivouspaiva/graphics/user-location.png"; sourceTree = "<group>"; };
 		1F1E233B17007F1D00312AE3 /* user-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-location@2x.png"; path = "Siivouspaiva/graphics/user-location@2x.png"; sourceTree = "<group>"; };
-		1F1E233E170086A900312AE3 /* arrest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrest.png; path = ../../../Downloads/ArrestsPlotter/arrest.png; sourceTree = "<group>"; };
 		1F1E234717009AE600312AE3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		1F1E234817009AE600312AE3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUITabBarController.h; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 		1F5677F91700CE0800180A39 /* tabicon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-star@2x.png"; path = "Siivouspaiva/graphics/tabicon-star@2x.png"; sourceTree = "<group>"; };
 		1F5678081700CED200180A39 /* tabicon-info-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info-active.png"; path = "Siivouspaiva/graphics/tabicon-info-active.png"; sourceTree = "<group>"; };
 		1F5678091700CED200180A39 /* tabicon-info-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info-active@2x.png"; path = "Siivouspaiva/graphics/tabicon-info-active@2x.png"; sourceTree = "<group>"; };
+		1F56780C1700D56200180A39 /* map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-marker.png"; path = "Siivouspaiva/graphics/map-marker.png"; sourceTree = "<group>"; };
+		1F56780D1700D56200180A39 /* map-marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-marker@2x.png"; path = "Siivouspaiva/graphics/map-marker@2x.png"; sourceTree = "<group>"; };
+		1F5678101700DAE200180A39 /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locate.png; path = Siivouspaiva/graphics/locate.png; sourceTree = "<group>"; };
+		1F5678111700DAE200180A39 /* locate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locate@2x.png"; path = "Siivouspaiva/graphics/locate@2x.png"; sourceTree = "<group>"; };
+		1F5678121700DAE200180A39 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload.png; path = Siivouspaiva/graphics/reload.png; sourceTree = "<group>"; };
+		1F5678131700DAE200180A39 /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reload@2x.png"; path = "Siivouspaiva/graphics/reload@2x.png"; sourceTree = "<group>"; };
+		1F5678181700E05F00180A39 /* siivouspaiva-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "siivouspaiva-logo.png"; path = "Siivouspaiva/graphics/siivouspaiva-logo.png"; sourceTree = "<group>"; };
+		1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "siivouspaiva-logo@2x.png"; path = "Siivouspaiva/graphics/siivouspaiva-logo@2x.png"; sourceTree = "<group>"; };
 		1FB3CC5416FE48170020026A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Siivouspaiva/graphics/Default-568h@2x.png"; sourceTree = "<group>"; };
 		1FB3CC5516FE48170020026A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Siivouspaiva/graphics/Default.png; sourceTree = "<group>"; };
 		1FB3CC5616FE48170020026A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Siivouspaiva/graphics/Default@2x.png"; sourceTree = "<group>"; };
@@ -132,12 +142,8 @@
 		1FDC3F9116FD2E8200465AA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		1FDC3F9616FD2E8200465AA2 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		1FDC3F9816FD2E8200465AA2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		1FDC3F9D16FD2E8200465AA2 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		1FDC3F9F16FD2E8200465AA2 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		1FDC3FA616FD2ED600465AA2 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
 		1FDC3FA716FD2ED600465AA2 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
 		1FDC3FD516FE220300465AA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -163,9 +169,16 @@
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1F5678181700E05F00180A39 /* siivouspaiva-logo.png */,
+				1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */,
+				1F5678101700DAE200180A39 /* locate.png */,
+				1F5678111700DAE200180A39 /* locate@2x.png */,
+				1F5678121700DAE200180A39 /* reload.png */,
+				1F5678131700DAE200180A39 /* reload@2x.png */,
+				1F56780C1700D56200180A39 /* map-marker.png */,
+				1F56780D1700D56200180A39 /* map-marker@2x.png */,
 				1F5677D61700C0A000180A39 /* navigation-controller.png */,
 				1F5677D71700C0A000180A39 /* navigation-controller@2x.png */,
-				1F1E233E170086A900312AE3 /* arrest.png */,
 				1F1E233A17007F1D00312AE3 /* user-location.png */,
 				1F1E233B17007F1D00312AE3 /* user-location@2x.png */,
 				1FB3CC5416FE48170020026A /* Default-568h@2x.png */,
@@ -233,12 +246,8 @@
 				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
 				1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */,
 				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
-				1FDC3F9616FD2E8200465AA2 /* first.png */,
-				1FDC3F9816FD2E8200465AA2 /* first@2x.png */,
 				1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */,
 				1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */,
-				1FDC3F9D16FD2E8200465AA2 /* second.png */,
-				1FDC3F9F16FD2E8200465AA2 /* second@2x.png */,
 				1FDC3FA616FD2ED600465AA2 /* MyLocation.m */,
 				1FDC3FA716FD2ED600465AA2 /* MyLocation.h */,
 				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
@@ -345,16 +354,11 @@
 			files = (
 				1FDC3F8316FD2E8100465AA2 /* InfoPlist.strings in Resources */,
 				1FDC3F9216FD2E8200465AA2 /* MainStoryboard.storyboard in Resources */,
-				1FDC3F9716FD2E8200465AA2 /* first.png in Resources */,
-				1FDC3F9916FD2E8200465AA2 /* first@2x.png in Resources */,
-				1FDC3F9E16FD2E8200465AA2 /* second.png in Resources */,
-				1FDC3FA016FD2E8200465AA2 /* second@2x.png in Resources */,
 				1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */,
 				1FB3CC5816FE48170020026A /* Default.png in Resources */,
 				1FB3CC5916FE48170020026A /* Default@2x.png in Resources */,
 				1F1E233C17007F1D00312AE3 /* user-location.png in Resources */,
 				1F1E233D17007F1D00312AE3 /* user-location@2x.png in Resources */,
-				1F1E233F170086A900312AE3 /* arrest.png in Resources */,
 				1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */,
 				1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */,
 				1F5677DB1700C26D00180A39 /* empty.png in Resources */,
@@ -374,6 +378,14 @@
 				1F5678071700CE0800180A39 /* tabicon-star@2x.png in Resources */,
 				1F56780A1700CED200180A39 /* tabicon-info-active.png in Resources */,
 				1F56780B1700CED200180A39 /* tabicon-info-active@2x.png in Resources */,
+				1F56780E1700D56200180A39 /* map-marker.png in Resources */,
+				1F56780F1700D56200180A39 /* map-marker@2x.png in Resources */,
+				1F5678141700DAE200180A39 /* locate.png in Resources */,
+				1F5678151700DAE200180A39 /* locate@2x.png in Resources */,
+				1F5678161700DAE200180A39 /* reload.png in Resources */,
+				1F5678171700DAE200180A39 /* reload@2x.png in Resources */,
+				1F56781A1700E05F00180A39 /* siivouspaiva-logo.png in Resources */,
+				1F56781B1700E05F00180A39 /* siivouspaiva-logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

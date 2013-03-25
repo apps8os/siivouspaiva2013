@@ -172,7 +172,9 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            annotationView.image = [UIImage imageNamed:@"arrest.png"];//here we use a nice image instead of the default pins
+            annotationView.centerOffset = CGPointMake(0,-20);
+            annotationView.calloutOffset = CGPointMake(0, 0);
+            annotationView.image = [UIImage imageNamed:@"map-marker.png"];//here we use a nice image instead of the default pins
         } else {
             annotationView.annotation = annotation;
         }
