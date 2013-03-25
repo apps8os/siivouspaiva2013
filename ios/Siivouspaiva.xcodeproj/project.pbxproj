@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1E233C17007F1D00312AE3 /* user-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233A17007F1D00312AE3 /* user-location.png */; };
+		1F1E233D17007F1D00312AE3 /* user-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233B17007F1D00312AE3 /* user-location@2x.png */; };
+		1F1E233F170086A900312AE3 /* arrest.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E233E170086A900312AE3 /* arrest.png */; };
+		1F1E234917009AE600312AE3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E234817009AE600312AE3 /* ThirdViewController.m */; };
+		1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */; };
 		1F2878CE16FF478D00929E82 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878B616FF478D00929E82 /* NSObject+SBJson.m */; };
 		1F2878CF16FF478D00929E82 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878B916FF478D00929E82 /* SBJsonParser.m */; };
 		1F2878D016FF478D00929E82 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878BB16FF478D00929E82 /* SBJsonStreamParser.m */; };
@@ -19,6 +24,25 @@
 		1F2878D716FF478D00929E82 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878C916FF478D00929E82 /* SBJsonTokeniser.m */; };
 		1F2878D816FF478D00929E82 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878CB16FF478D00929E82 /* SBJsonUTF8Stream.m */; };
 		1F2878D916FF478D00929E82 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878CD16FF478D00929E82 /* SBJsonWriter.m */; };
+		1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D61700C0A000180A39 /* navigation-controller.png */; };
+		1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D71700C0A000180A39 /* navigation-controller@2x.png */; };
+		1F5677DB1700C26D00180A39 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677DA1700C26D00180A39 /* empty.png */; };
+		1F5677FA1700CE0800180A39 /* tabicon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677EC1700CE0800180A39 /* tabicon-info.png */; };
+		1F5677FB1700CE0800180A39 /* tabicon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677ED1700CE0800180A39 /* tabicon-info@2x.png */; };
+		1F5677FC1700CE0800180A39 /* tabicon-list-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677EE1700CE0800180A39 /* tabicon-list-active.png */; };
+		1F5677FD1700CE0800180A39 /* tabicon-list-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677EF1700CE0800180A39 /* tabicon-list-active@2x.png */; };
+		1F5677FE1700CE0800180A39 /* tabicon-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F01700CE0800180A39 /* tabicon-list.png */; };
+		1F5677FF1700CE0800180A39 /* tabicon-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F11700CE0800180A39 /* tabicon-list@2x.png */; };
+		1F5678001700CE0800180A39 /* tabicon-map-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F21700CE0800180A39 /* tabicon-map-active.png */; };
+		1F5678011700CE0800180A39 /* tabicon-map-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F31700CE0800180A39 /* tabicon-map-active@2x.png */; };
+		1F5678021700CE0800180A39 /* tabicon-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F41700CE0800180A39 /* tabicon-map.png */; };
+		1F5678031700CE0800180A39 /* tabicon-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F51700CE0800180A39 /* tabicon-map@2x.png */; };
+		1F5678041700CE0800180A39 /* tabicon-star-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F61700CE0800180A39 /* tabicon-star-active.png */; };
+		1F5678051700CE0800180A39 /* tabicon-star-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F71700CE0800180A39 /* tabicon-star-active@2x.png */; };
+		1F5678061700CE0800180A39 /* tabicon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F81700CE0800180A39 /* tabicon-star.png */; };
+		1F5678071700CE0800180A39 /* tabicon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677F91700CE0800180A39 /* tabicon-star@2x.png */; };
+		1F56780A1700CED200180A39 /* tabicon-info-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678081700CED200180A39 /* tabicon-info-active.png */; };
+		1F56780B1700CED200180A39 /* tabicon-info-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678091700CED200180A39 /* tabicon-info-active@2x.png */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
 		1FB3CC5816FE48170020026A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5516FE48170020026A /* Default.png */; };
 		1FB3CC5916FE48170020026A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5616FE48170020026A /* Default@2x.png */; };
@@ -41,6 +65,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1E233A17007F1D00312AE3 /* user-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-location.png"; path = "Siivouspaiva/graphics/user-location.png"; sourceTree = "<group>"; };
+		1F1E233B17007F1D00312AE3 /* user-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "user-location@2x.png"; path = "Siivouspaiva/graphics/user-location@2x.png"; sourceTree = "<group>"; };
+		1F1E233E170086A900312AE3 /* arrest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrest.png; path = ../../../Downloads/ArrestsPlotter/arrest.png; sourceTree = "<group>"; };
+		1F1E234717009AE600312AE3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		1F1E234817009AE600312AE3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUITabBarController.h; sourceTree = "<group>"; };
+		1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUITabBarController.m; sourceTree = "<group>"; };
 		1F2878B516FF478D00929E82 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "SupportingFiles/SBJson/NSObject+SBJson.h"; sourceTree = "<group>"; };
 		1F2878B616FF478D00929E82 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJson.m"; path = "SupportingFiles/SBJson/NSObject+SBJson.m"; sourceTree = "<group>"; };
 		1F2878B716FF478D00929E82 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = SupportingFiles/SBJson/SBJson.h; sourceTree = "<group>"; };
@@ -66,6 +97,25 @@
 		1F2878CB16FF478D00929E82 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = SupportingFiles/SBJson/SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1F2878CC16FF478D00929E82 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = SupportingFiles/SBJson/SBJsonWriter.h; sourceTree = "<group>"; };
 		1F2878CD16FF478D00929E82 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SupportingFiles/SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
+		1F5677D61700C0A000180A39 /* navigation-controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller.png"; path = "Siivouspaiva/graphics/navigation-controller.png"; sourceTree = "<group>"; };
+		1F5677D71700C0A000180A39 /* navigation-controller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller@2x.png"; path = "Siivouspaiva/graphics/navigation-controller@2x.png"; sourceTree = "<group>"; };
+		1F5677DA1700C26D00180A39 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = Siivouspaiva/graphics/empty.png; sourceTree = "<group>"; };
+		1F5677EC1700CE0800180A39 /* tabicon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info.png"; path = "Siivouspaiva/graphics/tabicon-info.png"; sourceTree = "<group>"; };
+		1F5677ED1700CE0800180A39 /* tabicon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info@2x.png"; path = "Siivouspaiva/graphics/tabicon-info@2x.png"; sourceTree = "<group>"; };
+		1F5677EE1700CE0800180A39 /* tabicon-list-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-list-active.png"; path = "Siivouspaiva/graphics/tabicon-list-active.png"; sourceTree = "<group>"; };
+		1F5677EF1700CE0800180A39 /* tabicon-list-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-list-active@2x.png"; path = "Siivouspaiva/graphics/tabicon-list-active@2x.png"; sourceTree = "<group>"; };
+		1F5677F01700CE0800180A39 /* tabicon-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-list.png"; path = "Siivouspaiva/graphics/tabicon-list.png"; sourceTree = "<group>"; };
+		1F5677F11700CE0800180A39 /* tabicon-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-list@2x.png"; path = "Siivouspaiva/graphics/tabicon-list@2x.png"; sourceTree = "<group>"; };
+		1F5677F21700CE0800180A39 /* tabicon-map-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-map-active.png"; path = "Siivouspaiva/graphics/tabicon-map-active.png"; sourceTree = "<group>"; };
+		1F5677F31700CE0800180A39 /* tabicon-map-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-map-active@2x.png"; path = "Siivouspaiva/graphics/tabicon-map-active@2x.png"; sourceTree = "<group>"; };
+		1F5677F41700CE0800180A39 /* tabicon-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-map.png"; path = "Siivouspaiva/graphics/tabicon-map.png"; sourceTree = "<group>"; };
+		1F5677F51700CE0800180A39 /* tabicon-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-map@2x.png"; path = "Siivouspaiva/graphics/tabicon-map@2x.png"; sourceTree = "<group>"; };
+		1F5677F61700CE0800180A39 /* tabicon-star-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-star-active.png"; path = "Siivouspaiva/graphics/tabicon-star-active.png"; sourceTree = "<group>"; };
+		1F5677F71700CE0800180A39 /* tabicon-star-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-star-active@2x.png"; path = "Siivouspaiva/graphics/tabicon-star-active@2x.png"; sourceTree = "<group>"; };
+		1F5677F81700CE0800180A39 /* tabicon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-star.png"; path = "Siivouspaiva/graphics/tabicon-star.png"; sourceTree = "<group>"; };
+		1F5677F91700CE0800180A39 /* tabicon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-star@2x.png"; path = "Siivouspaiva/graphics/tabicon-star@2x.png"; sourceTree = "<group>"; };
+		1F5678081700CED200180A39 /* tabicon-info-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info-active.png"; path = "Siivouspaiva/graphics/tabicon-info-active.png"; sourceTree = "<group>"; };
+		1F5678091700CED200180A39 /* tabicon-info-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tabicon-info-active@2x.png"; path = "Siivouspaiva/graphics/tabicon-info-active@2x.png"; sourceTree = "<group>"; };
 		1FB3CC5416FE48170020026A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Siivouspaiva/graphics/Default-568h@2x.png"; sourceTree = "<group>"; };
 		1FB3CC5516FE48170020026A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Siivouspaiva/graphics/Default.png; sourceTree = "<group>"; };
 		1FB3CC5616FE48170020026A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Siivouspaiva/graphics/Default@2x.png"; sourceTree = "<group>"; };
@@ -113,9 +163,31 @@
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1F5677D61700C0A000180A39 /* navigation-controller.png */,
+				1F5677D71700C0A000180A39 /* navigation-controller@2x.png */,
+				1F1E233E170086A900312AE3 /* arrest.png */,
+				1F1E233A17007F1D00312AE3 /* user-location.png */,
+				1F1E233B17007F1D00312AE3 /* user-location@2x.png */,
 				1FB3CC5416FE48170020026A /* Default-568h@2x.png */,
 				1FB3CC5516FE48170020026A /* Default.png */,
 				1FB3CC5616FE48170020026A /* Default@2x.png */,
+				1F5677DA1700C26D00180A39 /* empty.png */,
+				1F5678081700CED200180A39 /* tabicon-info-active.png */,
+				1F5678091700CED200180A39 /* tabicon-info-active@2x.png */,
+				1F5677EC1700CE0800180A39 /* tabicon-info.png */,
+				1F5677ED1700CE0800180A39 /* tabicon-info@2x.png */,
+				1F5677EE1700CE0800180A39 /* tabicon-list-active.png */,
+				1F5677EF1700CE0800180A39 /* tabicon-list-active@2x.png */,
+				1F5677F01700CE0800180A39 /* tabicon-list.png */,
+				1F5677F11700CE0800180A39 /* tabicon-list@2x.png */,
+				1F5677F21700CE0800180A39 /* tabicon-map-active.png */,
+				1F5677F31700CE0800180A39 /* tabicon-map-active@2x.png */,
+				1F5677F41700CE0800180A39 /* tabicon-map.png */,
+				1F5677F51700CE0800180A39 /* tabicon-map@2x.png */,
+				1F5677F61700CE0800180A39 /* tabicon-star-active.png */,
+				1F5677F71700CE0800180A39 /* tabicon-star-active@2x.png */,
+				1F5677F81700CE0800180A39 /* tabicon-star.png */,
+				1F5677F91700CE0800180A39 /* tabicon-star@2x.png */,
 			);
 			name = Graphics;
 			path = ..;
@@ -157,6 +229,8 @@
 				1FDC3F8716FD2E8100465AA2 /* AppDelegate.h */,
 				1FDC3F8816FD2E8100465AA2 /* AppDelegate.m */,
 				1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */,
+				1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */,
+				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
 				1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */,
 				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
 				1FDC3F9616FD2E8200465AA2 /* first.png */,
@@ -167,6 +241,8 @@
 				1FDC3F9F16FD2E8200465AA2 /* second@2x.png */,
 				1FDC3FA616FD2ED600465AA2 /* MyLocation.m */,
 				1FDC3FA716FD2ED600465AA2 /* MyLocation.h */,
+				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
+				1F1E234817009AE600312AE3 /* ThirdViewController.m */,
 				1FDC3F7F16FD2E8100465AA2 /* Supporting Files */,
 			);
 			path = Siivouspaiva;
@@ -276,6 +352,28 @@
 				1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */,
 				1FB3CC5816FE48170020026A /* Default.png in Resources */,
 				1FB3CC5916FE48170020026A /* Default@2x.png in Resources */,
+				1F1E233C17007F1D00312AE3 /* user-location.png in Resources */,
+				1F1E233D17007F1D00312AE3 /* user-location@2x.png in Resources */,
+				1F1E233F170086A900312AE3 /* arrest.png in Resources */,
+				1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */,
+				1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */,
+				1F5677DB1700C26D00180A39 /* empty.png in Resources */,
+				1F5677FA1700CE0800180A39 /* tabicon-info.png in Resources */,
+				1F5677FB1700CE0800180A39 /* tabicon-info@2x.png in Resources */,
+				1F5677FC1700CE0800180A39 /* tabicon-list-active.png in Resources */,
+				1F5677FD1700CE0800180A39 /* tabicon-list-active@2x.png in Resources */,
+				1F5677FE1700CE0800180A39 /* tabicon-list.png in Resources */,
+				1F5677FF1700CE0800180A39 /* tabicon-list@2x.png in Resources */,
+				1F5678001700CE0800180A39 /* tabicon-map-active.png in Resources */,
+				1F5678011700CE0800180A39 /* tabicon-map-active@2x.png in Resources */,
+				1F5678021700CE0800180A39 /* tabicon-map.png in Resources */,
+				1F5678031700CE0800180A39 /* tabicon-map@2x.png in Resources */,
+				1F5678041700CE0800180A39 /* tabicon-star-active.png in Resources */,
+				1F5678051700CE0800180A39 /* tabicon-star-active@2x.png in Resources */,
+				1F5678061700CE0800180A39 /* tabicon-star.png in Resources */,
+				1F5678071700CE0800180A39 /* tabicon-star@2x.png in Resources */,
+				1F56780A1700CED200180A39 /* tabicon-info-active.png in Resources */,
+				1F56780B1700CED200180A39 /* tabicon-info-active@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +401,8 @@
 				1F2878D716FF478D00929E82 /* SBJsonTokeniser.m in Sources */,
 				1F2878D816FF478D00929E82 /* SBJsonUTF8Stream.m in Sources */,
 				1F2878D916FF478D00929E82 /* SBJsonWriter.m in Sources */,
+				1F1E234917009AE600312AE3 /* ThirdViewController.m in Sources */,
+				1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

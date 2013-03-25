@@ -1,14 +1,14 @@
 //
-//  SecondViewController.h
+//  ThirdViewController.h
 //  Siivouspaiva
 //
-//  Created by Fabian on 23.03.13.
+//  Created by Fabian on 25.03.13.
 //  Copyright (c) 2013 Fabian. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface ThirdViewController : UIViewController
 {
     IBOutlet UIButton *mybutton;
 }
