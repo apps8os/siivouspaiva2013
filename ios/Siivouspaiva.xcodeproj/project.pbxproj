@@ -23,6 +23,8 @@
 		1F2878D716FF478D00929E82 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878C916FF478D00929E82 /* SBJsonTokeniser.m */; };
 		1F2878D816FF478D00929E82 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878CB16FF478D00929E82 /* SBJsonUTF8Stream.m */; };
 		1F2878D916FF478D00929E82 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878CD16FF478D00929E82 /* SBJsonWriter.m */; };
+		1F40EEEC17018A50005E2C19 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F40EEEA17018A50005E2C19 /* icon.png */; };
+		1F40EEED17018A50005E2C19 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F40EEEB17018A50005E2C19 /* icon@2x.png */; };
 		1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D61700C0A000180A39 /* navigation-controller.png */; };
 		1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D71700C0A000180A39 /* navigation-controller@2x.png */; };
 		1F5677DB1700C26D00180A39 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677DA1700C26D00180A39 /* empty.png */; };
@@ -99,6 +101,8 @@
 		1F2878CB16FF478D00929E82 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = SupportingFiles/SBJson/SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1F2878CC16FF478D00929E82 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = SupportingFiles/SBJson/SBJsonWriter.h; sourceTree = "<group>"; };
 		1F2878CD16FF478D00929E82 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SupportingFiles/SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
+		1F40EEEA17018A50005E2C19 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Siivouspaiva/graphics/icon.png; sourceTree = "<group>"; };
+		1F40EEEB17018A50005E2C19 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Siivouspaiva/graphics/icon@2x.png"; sourceTree = "<group>"; };
 		1F5677D61700C0A000180A39 /* navigation-controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller.png"; path = "Siivouspaiva/graphics/navigation-controller.png"; sourceTree = "<group>"; };
 		1F5677D71700C0A000180A39 /* navigation-controller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller@2x.png"; path = "Siivouspaiva/graphics/navigation-controller@2x.png"; sourceTree = "<group>"; };
 		1F5677DA1700C26D00180A39 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = Siivouspaiva/graphics/empty.png; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1F40EEEA17018A50005E2C19 /* icon.png */,
+				1F40EEEB17018A50005E2C19 /* icon@2x.png */,
 				1F5678181700E05F00180A39 /* siivouspaiva-logo.png */,
 				1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */,
 				1F5678101700DAE200180A39 /* locate.png */,
@@ -386,6 +392,8 @@
 				1F5678171700DAE200180A39 /* reload@2x.png in Resources */,
 				1F56781A1700E05F00180A39 /* siivouspaiva-logo.png in Resources */,
 				1F56781B1700E05F00180A39 /* siivouspaiva-logo@2x.png in Resources */,
+				1F40EEEC17018A50005E2C19 /* icon.png in Resources */,
+				1F40EEED17018A50005E2C19 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

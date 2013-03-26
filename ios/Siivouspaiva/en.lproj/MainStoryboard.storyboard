@@ -42,14 +42,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iog-1p-8uP" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0sl-dq-u8L"/>
                             <constraint firstItem="urh-XV-Yf3" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="6zH-hc-JiR"/>
-                            <constraint firstItem="Pel-E2-E4P" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="GP1-vY-JbO"/>
+                            <constraint firstItem="Pel-E2-E4P" firstAttribute="top" secondItem="16" secondAttribute="top" constant="15" id="AaK-Ya-Rfs"/>
+                            <constraint firstItem="iog-1p-8uP" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="15" id="GhA-xm-jVv"/>
                             <constraint firstItem="urh-XV-Yf3" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="I8x-22-QaO"/>
                             <constraint firstItem="urh-XV-Yf3" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="L1F-qe-uhI"/>
                             <constraint firstItem="urh-XV-Yf3" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="NGy-h1-9xr"/>
-                            <constraint firstItem="iog-1p-8uP" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="abx-m4-S34"/>
-                            <constraint firstAttribute="trailing" secondItem="Pel-E2-E4P" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="viP-2V-6df"/>
+                            <constraint firstItem="Pel-E2-E4P" firstAttribute="top" secondItem="iog-1p-8uP" secondAttribute="top" type="default" id="c4k-BY-IIj"/>
+                            <constraint firstAttribute="trailing" secondItem="Pel-E2-E4P" secondAttribute="trailing" constant="15" id="nHu-My-8qq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="first" id="7"/>
@@ -494,8 +494,8 @@ Each participant is responsible for clearing away their leftovers. You should on
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>
-        <image name="locate.png" width="30" height="30"/>
-        <image name="reload.png" width="30" height="30"/>
+        <image name="locate.png" width="40" height="40"/>
+        <image name="reload.png" width="40" height="40"/>
         <image name="second" width="16" height="16"/>
         <image name="siivouspaiva-logo.png" width="265" height="62"/>
     </resources>
