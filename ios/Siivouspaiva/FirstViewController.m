@@ -3,9 +3,10 @@
 //  Siivouspaiva
 //
 //  Created by Fabian on 23.03.13.
-//  Copyright (c) 2013 Fabian. All rights reserved.
+//  Copyright (c) 2013 Fabian Häusler. All rights reserved.
 //
 
+//#define mBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #import "FirstViewController.h"
 #import "MyLocation.h"
 
@@ -20,11 +21,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    //[self prepareForSegue:[UIStoryboardSegue segueWithIdentifier:@"second" source:self destination:self performHandler:nil] sender:self];
     
     self._mapView.delegate = self;
-}
-- (void)viewWillAppear:(BOOL)animated {
-
+    
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 60.170208;
     zoomLocation.longitude= 24.938965;
@@ -32,20 +32,26 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
     
+
 }
+- (void)viewWillAppear:(BOOL)animated {
+
+    
+    //[super viewWillAppear:animated];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    //[super viewDidAppear:animated];
+}
+
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     currentUserLocation = userLocation;
     NSLog(@"UserLocation: %f", currentUserLocation.coordinate.longitude);
     
-    
-    //Add a annotation
-    //MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    //point.coordinate = userLocation.coordinate;
-    //point.title = @"You are here";
-    
-    //[self.mapView addAnnotation:point];
 }
 
 - (IBAction)refreshButton:(id)sender
@@ -132,14 +138,16 @@
         NSNumber * longitude = [singleEvent objectForKey:@"v"];
         NSString * name =[singleEvent objectForKey:@"name"];
         NSString * address = [singleEvent objectForKey:@"address"];
+        NSNumber * identifier = [singleEvent objectForKey:@"id"];
         
         //NSLog(@"finished %i", i);
         
         CLLocationCoordinate2D coordinate;
         coordinate.latitude = latitude.doubleValue;
         coordinate.longitude = longitude.doubleValue;
-        MyLocation *annotation = [[MyLocation alloc] initWithName:name address:address coordinate:coordinate];
+        MyLocation *annotation = [[MyLocation alloc] initWithName:name address:address coordinate:coordinate identifier:identifier];
         [_mapView addAnnotation:annotation];
+        NSLog(@"Annotation ident: %@", annotation.identi);
     }
     NSLog(@"finished");
     /*
@@ -163,32 +171,95 @@
      } */
 }
 
+/* Uising the MKPinAnnotationView animates PINs but breaks the image replacement
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation: (id <MKAnnotation>)annotation {
+    MKPinAnnotationView *pinView = nil;
+    if(annotation != _mapView.userLocation)
+    {
+        static NSString *defaultPinID = @"com.event.pin";
+        pinView = (MKPinAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+        if ( pinView == nil ) pinView = [[MKPinAnnotationView alloc]
+                                          initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+        pinView.canShowCallout = YES;
+        pinView.animatesDrop = YES;
+        pinView.enabled = YES;
+        pinView.image = [UIImage imageNamed:@"map-marker.png"];
+        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        
+        return pinView;
+    }
+    else {
+        [_mapView.userLocation setTitle:@"I am here"];
+    }
+    
+    return pinView;
+}
+*/
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    static NSString *identifier = @"MyLocation";
-    if ([annotation isKindOfClass:[MyLocation class]]) {
-        
-        MKAnnotationView *annotationView = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-        if (annotationView == nil) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            annotationView.enabled = YES;
-            annotationView.canShowCallout = YES;
-            annotationView.centerOffset = CGPointMake(0,-20);
-            annotationView.calloutOffset = CGPointMake(0, 0);
-            annotationView.image = [UIImage imageNamed:@"map-marker.png"];//here we use a nice image instead of the default pins
-        } else {
-            annotationView.annotation = annotation;
+    static NSString *identifier = @"com.annotation.pin";
+    
+    if(annotation !=mapView.userLocation) {
+        if ([annotation isKindOfClass:[MyLocation class]]) {
+            
+            MKAnnotationView *annotationView = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+            if (annotationView == nil) {
+                annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+                annotationView.enabled = YES;
+                annotationView.canShowCallout = YES;
+                annotationView.centerOffset = CGPointMake(0,-20);
+                annotationView.calloutOffset = CGPointMake(0, 0);
+                
+                UIButton *btnViewVenue = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
+                
+                [btnViewVenue addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+                
+                //NSInteger annotationV = [self._mapView.annotations indexOfObject:annotation];
+                NSNumber *annotationV = [self._mapView.annotations[[self._mapView.annotations indexOfObject:annotation]] identi];
+                NSLog(@"annotationValue: %@", annotationV);
+                btnViewVenue.tag = [annotationV intValue];
+                
+                annotationView.rightCalloutAccessoryView = btnViewVenue;
+                annotationView.image = [UIImage imageNamed:@"map-marker.png"];
+            } else {
+                annotationView.annotation = annotation;
+            }
+            
+            return annotationView;
         }
-        
-        return annotationView;
     }
     
     return nil;
 }
+/*
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
+calloutAccessoryControlTapped:(UIControl *)control
+{    
+    //DetailView *detail = (DetailView *)view.annotation;
+    //[detail loadDetailView];
+    //NSLog(@"detail button clicked %@", [[_mapView.annotations objectAtIndex:1] identifier]);
+}*/
+
+-(void)showDetails:(id)sender
+{
+    NSLog(@"button clicked, sender-id: %i", [sender tag]);
+    
+    [self performSegueWithIdentifier: @"goToSecondView" sender: self];
+
+
+}
+
+- (IBAction)backToMapScreen:(id)sender
+{
+    NSLog(@"BackButton has been clicked");
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

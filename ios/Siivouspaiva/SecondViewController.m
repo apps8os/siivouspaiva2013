@@ -3,7 +3,7 @@
 //  Siivouspaiva
 //
 //  Created by Fabian on 23.03.13.
-//  Copyright (c) 2013 Fabian. All rights reserved.
+//  Copyright (c) 2013 Fabian Häusler. All rights reserved.
 //
 
 #import "SecondViewController.h"
@@ -19,6 +19,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(UITableViewCell*)tableView:(UITableView *)eventListTable cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
