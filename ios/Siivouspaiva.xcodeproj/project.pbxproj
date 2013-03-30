@@ -52,6 +52,7 @@
 		1F5678171700DAE200180A39 /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678131700DAE200180A39 /* reload@2x.png */; };
 		1F56781A1700E05F00180A39 /* siivouspaiva-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678181700E05F00180A39 /* siivouspaiva-logo.png */; };
 		1F56781B1700E05F00180A39 /* siivouspaiva-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */; };
+		1F6568191705E2950071930F /* spSingleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6568181705E2950071930F /* spSingleEvent.m */; };
 		1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA317CB1701EDD800E535DA /* DetailViewController.m */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
 		1FB3CC5816FE48170020026A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5516FE48170020026A /* Default.png */; };
@@ -65,7 +66,7 @@
 		1FDC3F9216FD2E8200465AA2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */; };
 		1FDC3F9516FD2E8200465AA2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */; };
 		1FDC3F9C16FD2E8200465AA2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */; };
-		1FDC3FA816FD2ED600465AA2 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3FA616FD2ED600465AA2 /* MyLocation.m */; };
+		1FDC3FA816FD2ED600465AA2 /* eventSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3FA616FD2ED600465AA2 /* eventSpot.m */; };
 		1FDC3FD616FE220300465AA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD516FE220300465AA2 /* CoreLocation.framework */; };
 		1FDC3FD816FE220900465AA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD716FE220900465AA2 /* MapKit.framework */; };
 		1FECE74C17021A8D00B823A0 /* CustomSegueLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */; };
@@ -133,6 +134,8 @@
 		1F5678131700DAE200180A39 /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reload@2x.png"; path = "Siivouspaiva/graphics/reload@2x.png"; sourceTree = "<group>"; };
 		1F5678181700E05F00180A39 /* siivouspaiva-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "siivouspaiva-logo.png"; path = "Siivouspaiva/graphics/siivouspaiva-logo.png"; sourceTree = "<group>"; };
 		1F5678191700E05F00180A39 /* siivouspaiva-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "siivouspaiva-logo@2x.png"; path = "Siivouspaiva/graphics/siivouspaiva-logo@2x.png"; sourceTree = "<group>"; };
+		1F6568171705E2950071930F /* spSingleEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spSingleEvent.h; sourceTree = "<group>"; };
+		1F6568181705E2950071930F /* spSingleEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = spSingleEvent.m; sourceTree = "<group>"; };
 		1FA317CA1701EDD800E535DA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1FA317CB1701EDD800E535DA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1FB3CC5416FE48170020026A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Siivouspaiva/graphics/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -153,8 +156,8 @@
 		1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		1FDC3FA616FD2ED600465AA2 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
-		1FDC3FA716FD2ED600465AA2 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
+		1FDC3FA616FD2ED600465AA2 /* eventSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventSpot.m; sourceTree = "<group>"; };
+		1FDC3FA716FD2ED600465AA2 /* eventSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventSpot.h; sourceTree = "<group>"; };
 		1FDC3FD516FE220300465AA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1FDC3FD716FE220900465AA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegueLeft.h; sourceTree = "<group>"; };
@@ -179,6 +182,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6568141705D6A30071930F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FDC3FA616FD2ED600465AA2 /* eventSpot.m */,
+				1FDC3FA716FD2ED600465AA2 /* eventSpot.h */,
+				1F6568171705E2950071930F /* spSingleEvent.h */,
+				1F6568181705E2950071930F /* spSingleEvent.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F6568151705D6AB0071930F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F6568161705D6B10071930F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA317CA1701EDD800E535DA /* DetailViewController.h */,
+				1FA317CB1701EDD800E535DA /* DetailViewController.m */,
+				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
+				1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */,
+				1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */,
+				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
+				1F1E234817009AE600312AE3 /* ThirdViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,25 +289,19 @@
 		1FDC3F7E16FD2E8100465AA2 /* Siivouspaiva */ = {
 			isa = PBXGroup;
 			children = (
-				1FB3CC5316FE47BE0020026A /* Graphics */,
 				1FDC3F8716FD2E8100465AA2 /* AppDelegate.h */,
 				1FDC3F8816FD2E8100465AA2 /* AppDelegate.m */,
-				1FA317CA1701EDD800E535DA /* DetailViewController.h */,
-				1FA317CB1701EDD800E535DA /* DetailViewController.m */,
-				1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */,
+				1F6568161705D6B10071930F /* Controller */,
+				1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */,
+				1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */,
 				1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */,
 				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
 				1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */,
-				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
-				1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */,
-				1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */,
-				1FDC3FA616FD2ED600465AA2 /* MyLocation.m */,
-				1FDC3FA716FD2ED600465AA2 /* MyLocation.h */,
-				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
-				1F1E234817009AE600312AE3 /* ThirdViewController.m */,
-				1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */,
-				1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */,
+				1FB3CC5316FE47BE0020026A /* Graphics */,
+				1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */,
+				1F6568141705D6A30071930F /* Model */,
 				1FDC3F7F16FD2E8100465AA2 /* Supporting Files */,
+				1F6568151705D6AB0071930F /* View */,
 			);
 			path = Siivouspaiva;
 			sourceTree = "<group>";
@@ -422,7 +451,7 @@
 				1FDC3F8916FD2E8100465AA2 /* AppDelegate.m in Sources */,
 				1FDC3F9516FD2E8200465AA2 /* FirstViewController.m in Sources */,
 				1FDC3F9C16FD2E8200465AA2 /* SecondViewController.m in Sources */,
-				1FDC3FA816FD2ED600465AA2 /* MyLocation.m in Sources */,
+				1FDC3FA816FD2ED600465AA2 /* eventSpot.m in Sources */,
 				1F2878CE16FF478D00929E82 /* NSObject+SBJson.m in Sources */,
 				1F2878CF16FF478D00929E82 /* SBJsonParser.m in Sources */,
 				1F2878D016FF478D00929E82 /* SBJsonStreamParser.m in Sources */,
@@ -439,6 +468,7 @@
 				1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */,
 				1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */,
 				1FECE74C17021A8D00B823A0 /* CustomSegueLeft.m in Sources */,
+				1F6568191705E2950071930F /* spSingleEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

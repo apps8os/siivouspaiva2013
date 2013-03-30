@@ -1,6 +1,6 @@
-#import "MyLocation.h"
+#import "eventSpot.h"
 
-@implementation MyLocation
+@implementation eventSpot
 @synthesize name = _name;
 @synthesize address = _address;
 @synthesize coordinate = _coordinate;

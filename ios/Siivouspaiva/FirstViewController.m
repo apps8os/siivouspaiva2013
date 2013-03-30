@@ -8,7 +8,7 @@
 
 //#define mBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #import "FirstViewController.h"
-#import "MyLocation.h"
+#import "eventSpot.h"
 
 @interface FirstViewController ()
 
@@ -145,7 +145,7 @@
         CLLocationCoordinate2D coordinate;
         coordinate.latitude = latitude.doubleValue;
         coordinate.longitude = longitude.doubleValue;
-        MyLocation *annotation = [[MyLocation alloc] initWithName:name address:address coordinate:coordinate identifier:identifier];
+        eventSpot *annotation = [[eventSpot alloc] initWithName:name address:address coordinate:coordinate identifier:identifier];
         [_mapView addAnnotation:annotation];
         NSLog(@"Annotation ident: %@", annotation.identi);
     }
@@ -200,7 +200,7 @@
     static NSString *identifier = @"com.annotation.pin";
     
     if(annotation !=mapView.userLocation) {
-        if ([annotation isKindOfClass:[MyLocation class]]) {
+        if ([annotation isKindOfClass:[eventSpot class]]) {
             
             MKAnnotationView *annotationView = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
             if (annotationView == nil) {

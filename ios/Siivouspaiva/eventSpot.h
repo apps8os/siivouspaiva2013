@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface MyLocation : NSObject <MKAnnotation> {
+@interface eventSpot : NSObject <MKAnnotation> {
     NSString *_name;
     NSString *_address;
     NSNumber *_identifier;
