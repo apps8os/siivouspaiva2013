@@ -196,6 +196,8 @@
 		1F6568151705D6AB0071930F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */,
+				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -203,9 +205,10 @@
 		1F6568161705D6B10071930F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */,
+				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
 				1FA317CA1701EDD800E535DA /* DetailViewController.h */,
 				1FA317CB1701EDD800E535DA /* DetailViewController.m */,
-				1FDC3F9416FD2E8200465AA2 /* FirstViewController.m */,
 				1FDC3F9A16FD2E8200465AA2 /* SecondViewController.h */,
 				1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */,
 				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
@@ -294,9 +297,6 @@
 				1F6568161705D6B10071930F /* Controller */,
 				1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */,
 				1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */,
-				1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */,
-				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
-				1FDC3F9316FD2E8200465AA2 /* FirstViewController.h */,
 				1FB3CC5316FE47BE0020026A /* Graphics */,
 				1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */,
 				1F6568141705D6A30071930F /* Model */,

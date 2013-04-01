@@ -9,9 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-{
-    IBOutlet UIButton *backButton;
-}
-- (IBAction)backToMapScreen:(id)sender;
 
 @end

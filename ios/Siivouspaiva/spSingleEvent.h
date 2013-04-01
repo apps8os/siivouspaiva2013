@@ -10,22 +10,22 @@
 
 @interface spSingleEvent : NSObject
 
-@property (strong) NSString *name; 
-@property (strong) NSString *address;
+@property (strong) NSString *eventName;
+@property (strong) NSString *eventAddress;
 @property (strong) NSString *description;
 
-@property (readwrite) int beginHour;
-@property (readwrite) int beginMinute;
-@property (readwrite) int endHour;
-@property (readwrite) int endMinute;
-@property (readwrite) int idNumber;
+@property (strong) NSNumber *beginHour;
+@property (strong) NSNumber *beginMinute;
+@property (strong) NSNumber *endHour;
+@property (strong) NSNumber *endMinute;
+@property (strong) NSNumber *idNumber;
 
 @property (strong) NSString *tags;
 @property (strong) NSURL *link;
 
-@property (readwrite) float latitude;
-@property (readwrite) float longitude;
+@property (strong) NSNumber *latitude;
+@property (strong) NSNumber *longitude;
 
-+ (id) eventWithName:(NSString*)inName address:(NSString *)inAddress description:(NSString*)inDescription beginHour:(int)inBeginHour beginMinute:(int)inBeginMinute endHour:(int)inEndHour endMinute:(int)inEndMinute idNumber:(int)inIDNumber link:(NSURL*)inLink tags:(NSString*)inTags latitude:(float)inLatitude longitude:(float)inLongitude;
++ (id) eventWithName:(NSString*)inName address:(NSString *)inAddress description:(NSString*)inDescription beginHour:(NSNumber*)inBeginHour beginMinute:(NSNumber*)inBeginMinute endHour:(NSNumber*)inEndHour endMinute:(NSNumber*)inEndMinute idNumber:(NSNumber*)inIDNumber link:(NSURL*)inLink tags:(NSString*)inTags latitude:(NSNumber*)inLatitude longitude:(NSNumber*)inLongitude;
 
 @end

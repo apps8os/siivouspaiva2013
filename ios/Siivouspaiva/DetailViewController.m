@@ -29,11 +29,6 @@
 	// Do any additional setup after loading the view.
 }
 
-- (IBAction)backToMapScreen:(id)sender
-{
-    NSLog(@"BackButton has been clicked");
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

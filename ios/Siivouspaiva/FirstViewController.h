@@ -17,5 +17,4 @@
 
 - (IBAction)refreshButton:(id)sender;
 - (IBAction)updateUserLocation:(id)sender;
-- (IBAction)backToMapScreen:(id)sender;
 @end

@@ -8,36 +8,73 @@
 
 //#define mBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #import "FirstViewController.h"
+#import "DetailViewController.h"
 #import "eventSpot.h"
+#import "AppDelegate.h"
+#import "spSingleEvent.h"
+
 
 @interface FirstViewController ()
+@property (strong) NSMutableArray *eventsData;
+@property CLLocationCoordinate2D lastUpdateLocation;
+
 
 @end
 
 @implementation FirstViewController
 @synthesize _mapView;
 
+
+
 - (void)viewDidLoad
 {
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     //[self prepareForSegue:[UIStoryboardSegue segueWithIdentifier:@"second" source:self destination:self performHandler:nil] sender:self];
+
+    NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
+    [note addObserver:self selector:@selector(eventDidFire:) name:@"finishedDataLoading" object:nil];
+
     
     self._mapView.delegate = self;
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 60.170208;
     zoomLocation.longitude= 24.938965;
+    self.lastUpdateLocation = zoomLocation;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
     
 
 }
-- (void)viewWillAppear:(BOOL)animated {
 
+- (void) eventDidFire:(NSNotification *)note {
+    id obj = [note object];
+    NSLog(@"Data loaded in First %@", obj);
     
-    //[super viewWillAppear:animated];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //NSMutableArray *eventsData = appDelegate.events;
+    self.eventsData = [NSMutableArray array];
+    self.eventsData = appDelegate.events;
+    NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
+    //NSLog(@"Eventsdata total: %@", self.eventsData);
+
+    [self updateAnnotations];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if (!self.eventsData) {
+        // wait for data
+        NSLog(@"Wait for Data");
+    } else {
+        NSLog(@"Run Pins ");
+        [self updateAnnotations];
+    }
     
 }
 
@@ -46,27 +83,86 @@
     //[super viewDidAppear:animated];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     currentUserLocation = userLocation;
-    NSLog(@"UserLocation: %f", currentUserLocation.coordinate.longitude);
-    
+    //NSLog(@"UserLocation: %f", currentUserLocation.coordinate.longitude);
 }
 
 - (IBAction)refreshButton:(id)sender
 {
     NSLog(@"Refresh Triggered");
-    [self getData];
+    
+    //[self getData];
 }
 
 - (IBAction)updateUserLocation:(id)sender{
-    NSLog(@"buttontoupdate");
+    NSLog(@"Got to my location");
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentUserLocation.coordinate, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
 }
 
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    MKCoordinateRegion region = [mapView region];
+    
+    //NSLog(@"Region DID change.   Center is now %f,%f,  Deltas=%f,%f", region.center.latitude, region.center.longitude, region.span.latitudeDelta, region.span.longitudeDelta);
+    CLLocation *lastUpdate = [[CLLocation alloc] initWithLatitude:self.lastUpdateLocation.latitude longitude:self.lastUpdateLocation.longitude];
+    CLLocation *tempLocation = [[CLLocation alloc] initWithLatitude:region.center.latitude longitude:region.center.longitude];
+    CLLocationDistance tempDistance = [lastUpdate distanceFromLocation: tempLocation];
+    NSLog(@"DistanceLocation: %f", tempDistance);
+    
+    if (tempDistance > 400) {
+        if (self.eventsData) {
+            [self updateAnnotations];
+        }
+    }
+    
+
+}
+
+
+-(void)updateAnnotations
+{
+    // get current map view coordinates
+    MKCoordinateRegion mapRegion = [_mapView region];
+    CLLocationCoordinate2D centerLocation = mapRegion.center;
+    float mapLatMin = centerLocation.latitude - mapRegion.span.latitudeDelta;
+    float mapLatMax = centerLocation.latitude + mapRegion.span.latitudeDelta;
+    float mapLonMin = centerLocation.longitude - mapRegion.span.longitudeDelta;
+    float mapLonMax = centerLocation.longitude + mapRegion.span.longitudeDelta;
+    
+    self.lastUpdateLocation = centerLocation;
+    
+    //search through data for events on current map view
+    if (self.eventsData) {
+        NSMutableArray *mapSpots = [[NSMutableArray alloc] init];
+        for (int i = 0; i < [self.eventsData count]; i++) {
+            float eventLat = [[[self.eventsData objectAtIndex:i] latitude] floatValue];
+            float eventLon = [[[self.eventsData objectAtIndex:i] longitude] floatValue];
+            
+            if (eventLat>mapLatMin && eventLat<mapLatMax && eventLon>mapLonMin && eventLon<mapLonMax) {
+                //NSLog(@"Map match");
+                [mapSpots addObject:[self.eventsData objectAtIndex:i]];
+            }
+            //NSLog(@"eventsData data: %@", [[self.eventsData objectAtIndex:i] longitude]);
+        }
+        NSLog(@"mapspots count: %lu", (unsigned long)[mapSpots count]);
+        [self plotEventLocations:mapSpots];
+    }
+     
+    
+}
+/*
+// old getting Data
 - (void)getData
 {
     // get user map view
@@ -79,66 +175,88 @@
     
     
     NSURL *url = [NSURL URLWithString:@"http://siivouspaiva.com/data.php?query=load"];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
     
-    //all data: @"um=-90&uM=90&vm=-180&vM=180";
     NSString *jsonData = [NSString stringWithFormat:@"um=%f&uM=%f&vm=%f&vM=%f", userCoordinateLat1, userCoordinateLat2, userCoordinateLon1, userCoordinateLon2];
-    NSLog(@"jsonString: %@", jsonData);
-    
     NSData *requestData = [jsonData dataUsingEncoding:NSUTF8StringEncoding];
     NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%d", [requestData length]];
     [request setValue:requestDataLengthString forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:requestData];
-    
     NSLog(@"Sending Content: %@", requestDataLengthString);
     
-    NSURLResponse *response = NULL;
-    NSError *requestError = NULL;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    dispatch_async(queue, ^{
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:request
+                                                     returningResponse:&response
+                                                                 error:&error];
+        
+        NSArray* eventLocations = [NSJSONSerialization
+                                   JSONObjectWithData:responseData
+                                   options:kNilOptions
+                                   error:&error];
+        
+        //[self plotEventLocations:eventLocations];
+    });
     
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&requestError];
+
+    //NSURL *url = [NSURL URLWithString:@"http://siivouspaiva.com/data.php?query=load"];
+    
+    //NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    //[request setHTTPMethod:@"POST"];
+    
+    //all data: @"um=-90&uM=90&vm=-180&vM=180";
+    //NSString *jsonData = [NSString stringWithFormat:@"um=%f&uM=%f&vm=%f&vM=%f", userCoordinateLat1, userCoordinateLat2, userCoordinateLon1, userCoordinateLon2];
+    //NSLog(@"jsonString: %@", jsonData);
+    
+    //NSData *requestData = [jsonData dataUsingEncoding:NSUTF8StringEncoding];
+    //NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%d", [requestData length]];
+    //[request setValue:requestDataLengthString forHTTPHeaderField:@"Content-Length"];
+    //[request setHTTPBody:requestData];
+    
+    
+    
+    //NSURLResponse *response = NULL;
+    //NSError *requestError = NULL;
+    
+    //NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&requestError];
     //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
-    NSError* error;
-    NSArray* eventLocations = [NSJSONSerialization
-                               JSONObjectWithData:responseData
-                               options:kNilOptions
-                               error:&error];
+    //NSError* error;
+    //NSArray* eventLocations = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     //NSLog(@"locations: %@", eventLocations);
     
-    [self plotEventLocations:eventLocations];
-    
-    
-    /*
-     // 1) Get the latest event
-     NSDictionary* singleEvent = [eventLocations objectAtIndex:0];
      
-     // 2) Get the funded amount and loan amount
-     NSNumber* coordinateUdata = [singleEvent objectForKey:@"u"];
-     NSNumber* coordinateVdata = [singleEvent objectForKey:@"v"];
-     float eventCooU = [coordinateUdata floatValue];
-     float eventCooV = [coordinateVdata floatValue];
      
-     3) Set the label appropriately
-     finalTextLabel.text = [NSString stringWithFormat:@"Event: %@ is here: %f , %f",
-     [singleEvent objectForKey:@"name"],
-     eventCooU, eventCooV];
-     */
+    //[self plotEventLocations:eventLocations];
     
-}
+
+} */
+
+
+// old plotting Events
 - (void)plotEventLocations:(NSArray *)responseData {
     for (id<MKAnnotation> annotation in _mapView.annotations) {
-        [_mapView removeAnnotation:annotation];
+        if ( [annotation isKindOfClass:[ MKUserLocation class]] ) {
+        }
+        else {
+            [_mapView removeAnnotation:annotation];
+        }
+        
     }
     
     for (int i = 0; i < [responseData count]; i++) {
-        NSDictionary* singleEvent = [responseData objectAtIndex:i];
+        //NSDictionary* singleEvent = [[responseData objectAtIndex:i] ];
         
-        NSNumber * latitude = [singleEvent objectForKey:@"u"];
-        NSNumber * longitude = [singleEvent objectForKey:@"v"];
-        NSString * name =[singleEvent objectForKey:@"name"];
-        NSString * address = [singleEvent objectForKey:@"address"];
-        NSNumber * identifier = [singleEvent objectForKey:@"id"];
+        NSNumber * latitude = [[responseData objectAtIndex:i] latitude];
+        NSNumber * longitude = [[responseData objectAtIndex:i] longitude];
+        NSString * name = [[responseData objectAtIndex:i] eventName];
+        NSString * address = [[responseData objectAtIndex:i] eventAddress];
+        NSNumber * identifier = [[responseData objectAtIndex:i] idNumber];
         
         //NSLog(@"finished %i", i);
         
@@ -150,25 +268,9 @@
         NSLog(@"Annotation ident: %@", annotation.identi);
     }
     NSLog(@"finished");
-    /*
-     for (NSArray * row in responseData) {
-     
-     //NSDictionary* singleEvent = [responseData row];
-     
-     
-     NSNumber * latitude = [row objectAtIndex:12];
-     NSNumber * longitude = [row objectAtIndex:13];
-     NSString * name =[row objectAtIndex:8];
-     NSString * address = [row objectAtIndex:1];
-     
-     CLLocationCoordinate2D coordinate;
-     coordinate.latitude = latitude.doubleValue;
-     coordinate.longitude = longitude.doubleValue;
-     MyLocation *annotation = [[MyLocation alloc] initWithName:name address:address coordinate:coordinate] ;
-     [mapView addAnnotation:annotation];
-     
-     
-     } */
+    
+    for (NSArray * row in responseData) {
+    }
 }
 
 /* Uising the MKPinAnnotationView animates PINs but breaks the image replacement
@@ -212,12 +314,14 @@
                 
                 UIButton *btnViewVenue = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
                 
-                [btnViewVenue addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+                [btnViewVenue addTarget:self
+                                 action:@selector(showDetails:)
+                       forControlEvents:UIControlEventTouchUpInside];
                 
                 //NSInteger annotationV = [self._mapView.annotations indexOfObject:annotation];
                 NSNumber *annotationV = [self._mapView.annotations[[self._mapView.annotations indexOfObject:annotation]] identi];
-                NSLog(@"annotationValue: %@", annotationV);
-                btnViewVenue.tag = [annotationV intValue];
+                //NSLog(@"annotationValue: %@", annotationV);
+                //btnViewVenue.tag = [annotationV intValue];
                 
                 annotationView.rightCalloutAccessoryView = btnViewVenue;
                 annotationView.image = [UIImage imageNamed:@"map-marker.png"];
@@ -240,26 +344,26 @@ calloutAccessoryControlTapped:(UIControl *)control
     //NSLog(@"detail button clicked %@", [[_mapView.annotations objectAtIndex:1] identifier]);
 }*/
 
+
+#pragma mark - Segues
+
 -(void)showDetails:(id)sender
 {
-    NSLog(@"button clicked, sender-id: %i", [sender tag]);
+    //NSLog(@"button clicked, sender-id: %i", [sender tag]);
     
-    [self performSegueWithIdentifier: @"goToSecondView" sender: self];
-
-
+    [self performSegueWithIdentifier: @"goToDetailView" sender: self];
 }
 
-- (IBAction)backToMapScreen:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"BackButton has been clicked");
+    if ([[segue identifier] isEqualToString:@"goToDetailView"]) {
+        // get Detail ID
+        // Video 7 minute 31
+    }
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 @end

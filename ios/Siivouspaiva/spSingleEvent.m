@@ -10,12 +10,12 @@
 
 @implementation spSingleEvent
 
-+ (id) eventWithName:(NSString*)inName address:(NSString *)inAddress description:(NSString*)inDescription beginHour:(int)inBeginHour beginMinute:(int)inBeginMinute endHour:(int)inEndHour endMinute:(int)inEndMinute idNumber:(int)inIDNumber link:(NSURL*)inLink tags:(NSString*)inTags latitude:(float)inLatitude longitude:(float)inLongitude
++ (id) eventWithName:(NSString*)inName address:(NSString *)inAddress description:(NSString*)inDescription beginHour:(NSNumber*)inBeginHour beginMinute:(NSNumber*)inBeginMinute endHour:(NSNumber*)inEndHour endMinute:(NSNumber*)inEndMinute idNumber:(NSNumber*)inIDNumber link:(NSURL*)inLink tags:(NSString*)inTags latitude:(NSNumber*)inLatitude longitude:(NSNumber*)inLongitude
 {
     spSingleEvent *singleEvent = [[spSingleEvent alloc] init];
     
-    singleEvent.name = inName;
-    singleEvent.address = inAddress;
+    singleEvent.eventName = inName;
+    singleEvent.eventAddress = inAddress;
     singleEvent.description = inDescription;
     singleEvent.beginHour = inBeginHour;
     singleEvent.beginMinute = inBeginMinute;
