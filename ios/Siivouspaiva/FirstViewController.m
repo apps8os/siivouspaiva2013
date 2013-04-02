@@ -119,8 +119,10 @@
     CLLocation *tempLocation = [[CLLocation alloc] initWithLatitude:region.center.latitude longitude:region.center.longitude];
     CLLocationDistance tempDistance = [lastUpdate distanceFromLocation: tempLocation];
     NSLog(@"DistanceLocation: %f", tempDistance);
+    double currentMapVisible = region.span.latitudeDelta*111000/2;
+    //NSLog(@"My map shows: %f", currentMapVisible);
     
-    if (tempDistance > 400) {
+    if (tempDistance > currentMapVisible) {
         if (self.eventsData) {
             [self updateAnnotations];
         }
@@ -312,9 +314,9 @@
                 annotationView.centerOffset = CGPointMake(0,-20);
                 annotationView.calloutOffset = CGPointMake(0, 0);
                 
-                UIButton *btnViewVenue = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
+                UIButton *btnDetailRight = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
                 
-                [btnViewVenue addTarget:self
+                [btnDetailRight addTarget:self
                                  action:@selector(showDetails:)
                        forControlEvents:UIControlEventTouchUpInside];
                 
@@ -323,7 +325,9 @@
                 //NSLog(@"annotationValue: %@", annotationV);
                 //btnViewVenue.tag = [annotationV intValue];
                 
-                annotationView.rightCalloutAccessoryView = btnViewVenue;
+                
+                annotationView.rightCalloutAccessoryView = btnDetailRight;
+                //[annotationView bringSubviewToFront:annotationView.rightCalloutAccessoryView];
                 annotationView.image = [UIImage imageNamed:@"map-marker.png"];
             } else {
                 annotationView.annotation = annotation;

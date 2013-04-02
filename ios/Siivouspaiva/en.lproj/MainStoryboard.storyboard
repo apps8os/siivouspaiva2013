@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urh-XV-Yf3"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iog-1p-8uP">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iog-1p-8uP">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="reload.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,7 +55,7 @@
                                     <action selector="updateUserLocation:" destination="2" eventType="touchUpInside" id="x0S-nL-2LT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-nQ-g8K">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-nQ-g8K">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="dcY-Ud-2uX"/>
                                 </constraints>
@@ -87,7 +87,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="first" id="7"/>
-                    <navigationItem key="navigationItem" id="l3N-M7-yVd"/>
+                    <navigationItem key="navigationItem" id="l3N-M7-yVd">
+                        <barButtonItem key="rightBarButtonItem" title="Center" id="SaZ-wG-HbU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="_mapView" destination="urh-XV-Yf3" id="hrC-iN-ThH"/>
                         <outlet property="mapView" destination="urh-XV-Yf3" id="u8b-JG-rmN"/>
@@ -231,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-Qw-pE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671" y="-847"/>
+            <point key="canvasLocation" x="1809" y="-473"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="zaY-Y6-LmL">
@@ -299,7 +301,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="second" id="6"/>
-                    <navigationItem key="navigationItem" id="J9Y-Vx-ceD"/>
+                    <navigationItem key="navigationItem" id="J9Y-Vx-ceD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="j0z-hk-aWt">
+                            <connections>
+                                <segue destination="QZd-Xx-Hak" kind="push" id="4Y8-ls-AMD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventListTable" destination="Te6-fA-hTO" id="MtH-k2-io5"/>
                     </connections>
@@ -768,4 +776,7 @@ Each participant is responsible for clearing away their leftovers. You should on
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Y8-ls-AMD"/>
+    </inferredMetricsTieBreakers>
 </document>
