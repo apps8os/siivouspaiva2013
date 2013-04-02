@@ -33,7 +33,17 @@
         NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
     }
     
+    /*
+    UIImage *i3 = [UIImage imageNamed:@"icon-list"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i3
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
     
+    UIImage *i4 = [UIImage imageNamed:@"icon-list-active"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i4
+                                                      forState:UIControlStateSelected
+                                                    barMetrics:UIBarMetricsDefault];
+     */
 }
 
 -(UITableViewCell*)tableView:(UITableView *)eventListTable cellForRowAtIndexPath:(NSIndexPath *)indexPath

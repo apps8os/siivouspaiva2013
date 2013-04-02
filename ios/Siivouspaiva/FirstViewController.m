@@ -48,8 +48,43 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
     
+    /*
+    UIImage *backImage = [UIImage imageNamed: @"icon-map.png"];
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStylePlain target:nil action:nil];
+    btn.tintColor = [UIColor colorWithWhite:1 alpha:0];
+    self.navigationItem.backBarButtonItem = btn;
+    */
+    
+    // Siivouspaiva logo as Navigation Bar Title
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva.png"]];
 
+    // locate Button
+    UIButton *locateButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *locateButtonImage = [UIImage imageNamed:@"icon-locate"];
+    UIImage *locateButtonImagePressed = [UIImage imageNamed:@"icon-locate-active"];
+    [locateButton setBackgroundImage:locateButtonImage forState:UIControlStateNormal];
+    [locateButton setBackgroundImage:locateButtonImagePressed forState:UIControlStateHighlighted];
+    [locateButton addTarget:self action:@selector(updateUserLocation:) forControlEvents:UIControlEventTouchUpInside];
+    locateButton.frame = CGRectMake(0, 0, 45, 44);
+    UIView *locateButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 44)];
+    locateButtonView.bounds = CGRectOffset(locateButtonView.bounds, -5, 0);
+    [locateButtonView addSubview:locateButton];
+    UIBarButtonItem *locateButtonItem = [[UIBarButtonItem alloc] initWithCustomView:locateButtonView];
+    self.navigationItem.rightBarButtonItem = locateButtonItem;
+
+    
+    // customize Back button image
+    UIImage *i1 = [UIImage imageNamed:@"icon-back"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i1
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
+    
+    UIImage *i2 = [UIImage imageNamed:@"icon-back-active"];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i2
+                                                      forState:UIControlStateHighlighted
+                                                    barMetrics:UIBarMetricsDefault];
 }
+
 
 - (void) eventDidFire:(NSNotification *)note {
     id obj = [note object];
