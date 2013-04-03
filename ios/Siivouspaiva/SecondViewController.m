@@ -30,20 +30,9 @@
     self.eventsData = [NSMutableArray array];
     if (appDelegate.events) {
         self.eventsData = appDelegate.events;
-        NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
+        NSLog(@"eventsDataCopy count: %lu", (unsigned long)[self.eventsData count]);
     }
     
-    /*
-    UIImage *i3 = [UIImage imageNamed:@"icon-list"];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i3
-                                                      forState:UIControlStateNormal
-                                                    barMetrics:UIBarMetricsDefault];
-    
-    UIImage *i4 = [UIImage imageNamed:@"icon-list-active"];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i4
-                                                      forState:UIControlStateSelected
-                                                    barMetrics:UIBarMetricsDefault];
-     */
 }
 
 -(UITableViewCell*)tableView:(UITableView *)eventListTable cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,7 +58,7 @@
     //NSMutableArray *eventsData = appDelegate.events;
     self.eventsData = [NSMutableArray array];
     self.eventsData = appDelegate.events;
-    NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
+    NSLog(@"eventsDataCopy count: %lu", (unsigned long)[self.eventsData count]);
     //NSLog(@"Eventsdata total: %@", self.eventsData);
     
     //[self updateAnnotations];

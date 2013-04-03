@@ -18,7 +18,6 @@
 @property (strong) NSMutableArray *eventsData;
 @property CLLocationCoordinate2D lastUpdateLocation;
 
-
 @end
 
 @implementation FirstViewController
@@ -83,6 +82,7 @@
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:i2
                                                       forState:UIControlStateHighlighted
                                                     barMetrics:UIBarMetricsDefault];
+    
 }
 
 
@@ -98,7 +98,7 @@
     NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
     //NSLog(@"Eventsdata total: %@", self.eventsData);
 
-    [self updateAnnotations];
+    //[self updateAnnotations];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -115,7 +115,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //[super viewDidAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,7 +135,6 @@
 {
     NSLog(@"Refresh Triggered");
     
-    //[self getData];
 }
 
 - (IBAction)updateUserLocation:(id)sender{
@@ -180,21 +179,24 @@
     self.lastUpdateLocation = centerLocation;
     
     //search through data for events on current map view
-    if (self.eventsData) {
+    //if (self.eventsData) {
+        NSArray *tempEvents = [self.eventsData copy];
+        
+        
         NSMutableArray *mapSpots = [[NSMutableArray alloc] init];
-        for (int i = 0; i < [self.eventsData count]; i++) {
-            float eventLat = [[[self.eventsData objectAtIndex:i] latitude] floatValue];
-            float eventLon = [[[self.eventsData objectAtIndex:i] longitude] floatValue];
+        for (int i = 0; i < [tempEvents count]; i++) {
+            float eventLat = [[[tempEvents objectAtIndex:i] latitude] floatValue];
+            float eventLon = [[[tempEvents objectAtIndex:i] longitude] floatValue];
             
             if (eventLat>mapLatMin && eventLat<mapLatMax && eventLon>mapLonMin && eventLon<mapLonMax) {
                 //NSLog(@"Map match");
-                [mapSpots addObject:[self.eventsData objectAtIndex:i]];
+                [mapSpots addObject:[tempEvents objectAtIndex:i]];
             }
             //NSLog(@"eventsData data: %@", [[self.eventsData objectAtIndex:i] longitude]);
         }
-        NSLog(@"mapspots count: %lu", (unsigned long)[mapSpots count]);
         [self plotEventLocations:mapSpots];
-    }
+        NSLog(@"mapspots count: %lu", (unsigned long)[mapSpots count]);
+   // }
      
     
 }
@@ -275,7 +277,7 @@
 } */
 
 
-// old plotting Events
+// plotting Events
 - (void)plotEventLocations:(NSArray *)responseData {
     for (id<MKAnnotation> annotation in _mapView.annotations) {
         if ( [annotation isKindOfClass:[ MKUserLocation class]] ) {
@@ -302,7 +304,7 @@
         coordinate.longitude = longitude.doubleValue;
         eventSpot *annotation = [[eventSpot alloc] initWithName:name address:address coordinate:coordinate identifier:identifier];
         [_mapView addAnnotation:annotation];
-        NSLog(@"Annotation ident: %@", annotation.identi);
+        //NSLog(@"Annotation ident: %@", annotation.identi);
     }
     NSLog(@"finished");
     
@@ -352,13 +354,13 @@
                 UIButton *btnDetailRight = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
                 
                 [btnDetailRight addTarget:self
-                                 action:@selector(showDetails:)
+                                 action:@selector(self)
                        forControlEvents:UIControlEventTouchUpInside];
                 
                 //NSInteger annotationV = [self._mapView.annotations indexOfObject:annotation];
-                NSNumber *annotationV = [self._mapView.annotations[[self._mapView.annotations indexOfObject:annotation]] identi];
+                //NSNumber *annotationV = [self._mapView.annotations[[self._mapView.annotations indexOfObject:annotation]] identi];
                 //NSLog(@"annotationValue: %@", annotationV);
-                //btnViewVenue.tag = [annotationV intValue];
+                //btnDetailRight.tag = [annotationV intValue];
                 
                 
                 annotationView.rightCalloutAccessoryView = btnDetailRight;
@@ -385,12 +387,28 @@ calloutAccessoryControlTapped:(UIControl *)control
 
 
 #pragma mark - Segues
-
+/*
 -(void)showDetails:(id)sender
 {
-    //NSLog(@"button clicked, sender-id: %i", [sender tag]);
+    NSLog(@"button clicked, sender-id: %@", sender );
     
-    [self performSegueWithIdentifier: @"goToDetailView" sender: self];
+    //[self performSegueWithIdentifier: @"goToDetailView" sender: self];
+}
+ */
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    eventSpot *annotationClicked = (eventSpot *)view.annotation;
+    NSLog(@"evenSpot identifier: %@", annotationClicked.identi);
+    //NSNumber *artist = artPiece.idNumber;
+    
+    spSingleEvent *transferEvent =  [[spSingleEvent alloc] init];
+    for (int i = 0; i < [self.eventsData count]; i++) {
+        if ([[self.eventsData objectAtIndex:i] idNumber] == annotationClicked.identi ) {
+            transferEvent = [self.eventsData objectAtIndex:i];
+        }
+    }
+    [self performSegueWithIdentifier: @"goToDetailView" sender: transferEvent];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -398,6 +416,9 @@ calloutAccessoryControlTapped:(UIControl *)control
     if ([[segue identifier] isEqualToString:@"goToDetailView"]) {
         // get Detail ID
         // Video 7 minute 31
+        
+        spSingleEvent *eventClicked = sender;
+        ((DetailViewController*)segue.destinationViewController).detailEvent = eventClicked;
     }
 }
 

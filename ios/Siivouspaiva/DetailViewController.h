@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "spSingleEvent.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <MKMapViewDelegate>
+{
+    IBOutlet UIButton *buttonLinkToEvent;
+    IBOutlet UIButton *buttonShareEvent;
+    IBOutlet UILabel *titleText;
+    IBOutlet UILabel *addressText;
+    IBOutlet UINavigationItem *mainNaviagtionTitle;
+    
+}
+@property (nonatomic, strong) IBOutlet MKMapView *_mapViewDetail;
+@property (strong, nonatomic) spSingleEvent *detailEvent;
 
 @end
