@@ -56,7 +56,7 @@
         if ([self.detailEvent.link.absoluteString isEqual: @""]) {
             [buttonLinkToEvent setEnabled:NO];
         } else {
-            
+            [buttonLinkToEvent setEnabled:YES];
         }
         
         
@@ -83,7 +83,7 @@
         
     }
 }
-// Replace annotation image
+// set custom annotation image
 - (MKAnnotationView *)mapView:(MKMapView *)newMapView viewForAnnotation:(id )newAnnotation {
     MKAnnotationView *a = [ [ MKAnnotationView alloc ] initWithAnnotation:newAnnotation reuseIdentifier:@"currentloc"];
     if ( a == nil )
@@ -92,21 +92,13 @@
     return a;
 }
 
+// share sheet
 - (IBAction)sendPost:(id)sender
 {
     NSArray *activityItems;
-    /*
-    if (_postImage.image != nil) {
-        activityItems = @[self.text, _postImage.image];
-    } else {
-        activityItems = @[_postText.text, _postImage.image];
-    }
-    */
     NSString *shareText = [NSString stringWithFormat:@"Join the Siivouspäivä event: %@ in %@", self.detailEvent.eventName, self.detailEvent.eventAddress];
     UIImage *shareImage = [UIImage imageNamed:@"siivouspaiva-logo.png"];
-
     activityItems = @[shareText, shareImage];
-    
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
