@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "WebLinkViewController.h"
 #import "eventSpot.h"
 
 @interface DetailViewController ()
@@ -40,6 +41,7 @@
      
     
     if (self.detailEvent) {
+        // text fields
         titleText.text = self.detailEvent.eventName;
         NSString *addressString = self.detailEvent.eventAddress;
         addressString = [addressString stringByReplacingOccurrencesOfString:@", Suomi"
@@ -47,11 +49,29 @@
         addressString = [addressString stringByReplacingOccurrencesOfString:@", Finland"
                                                                  withString:@""];
         addressText.text = addressString;
+        eventDescriptionField.text = self.detailEvent.description;
+        mainNaviagtionTitle.title = @" ";
         
-        mainNaviagtionTitle.title = self.detailEvent.eventName;
-        //[[UINavigationBar appearance] setTitlePositionAdjustment:UIOffsetMake(-50, 0)];
-        
+        // link setting
+        if ([self.detailEvent.link.absoluteString isEqual: @""]) {
+            [buttonLinkToEvent setEnabled:NO];
+        } else {
             
+        }
+        
+        
+        
+        // Share Button
+        /*
+        NSString *textToShare = @"your text";
+        UIImage *yourImage = [UIImage imageNamed:@"siivouspaiva-logo.png"];
+        NSArray *itemsToShare = @[textToShare, yourImage];
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+        activityVC.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll]; //or whichever you don't need
+        [self presentViewController:activityVC animated:YES completion:nil];
+        */
+         
+        
         // Center Map to Event-Location
         CLLocationCoordinate2D eventLocation = CLLocationCoordinate2DMake([self.detailEvent.latitude doubleValue], [self.detailEvent.longitude doubleValue]);
         MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(eventLocation, 400, 400);
@@ -72,11 +92,40 @@
     return a;
 }
 
+- (IBAction)sendPost:(id)sender
+{
+    NSArray *activityItems;
+    /*
+    if (_postImage.image != nil) {
+        activityItems = @[self.text, _postImage.image];
+    } else {
+        activityItems = @[_postText.text, _postImage.image];
+    }
+    */
+    NSString *shareText = [NSString stringWithFormat:@"Join the Siivouspäivä event: %@ in %@", self.detailEvent.eventName, self.detailEvent.eventAddress];
+    UIImage *shareImage = [UIImage imageNamed:@"siivouspaiva-logo.png"];
+
+    activityItems = @[shareText, shareImage];
+    
+    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityController.excludedActivityTypes = @[UIActivityTypePostToWeibo, UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
+    [self presentViewController:activityController animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Seque
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToWebView"]) {
+        ((WebLinkViewController*)segue.destinationViewController).eventWithLink = self.detailEvent;
+    }
+}
+
 
 @end

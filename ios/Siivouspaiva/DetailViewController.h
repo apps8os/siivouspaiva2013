@@ -17,9 +17,12 @@
     IBOutlet UILabel *titleText;
     IBOutlet UILabel *addressText;
     IBOutlet UINavigationItem *mainNaviagtionTitle;
+    IBOutlet UITextView *eventDescriptionField;
     
 }
 @property (nonatomic, strong) IBOutlet MKMapView *_mapViewDetail;
 @property (strong, nonatomic) spSingleEvent *detailEvent;
+
+- (IBAction)sendPost:(id)sender;
 
 @end

@@ -25,6 +25,12 @@
 		1F2878D916FF478D00929E82 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2878CD16FF478D00929E82 /* SBJsonWriter.m */; };
 		1F40EEEC17018A50005E2C19 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F40EEEA17018A50005E2C19 /* icon.png */; };
 		1F40EEED17018A50005E2C19 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F40EEEB17018A50005E2C19 /* icon@2x.png */; };
+		1F4B159C170CADB100B849B2 /* bt-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B1596170CADB100B849B2 /* bt-link.png */; };
+		1F4B159D170CADB100B849B2 /* bt-link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B1597170CADB100B849B2 /* bt-link@2x.png */; };
+		1F4B159E170CADB100B849B2 /* bt-share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B1598170CADB100B849B2 /* bt-share.png */; };
+		1F4B159F170CADB100B849B2 /* bt-share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B1599170CADB100B849B2 /* bt-share@2x.png */; };
+		1F4B15A0170CADB100B849B2 /* button-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B159A170CADB100B849B2 /* button-background.png */; };
+		1F4B15A1170CADB100B849B2 /* button-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B159B170CADB100B849B2 /* button-background@2x.png */; };
 		1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D61700C0A000180A39 /* navigation-controller.png */; };
 		1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D71700C0A000180A39 /* navigation-controller@2x.png */; };
 		1F5677DB1700C26D00180A39 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677DA1700C26D00180A39 /* empty.png */; };
@@ -71,6 +77,7 @@
 		1F66CFD1170B747E00E23FF7 /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F66CFCD170B747E00E23FF7 /* icon-star.png */; };
 		1F66CFD2170B747E00E23FF7 /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F66CFCE170B747E00E23FF7 /* icon-star@2x.png */; };
 		1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA317CB1701EDD800E535DA /* DetailViewController.m */; };
+		1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
 		1FB3CC5816FE48170020026A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5516FE48170020026A /* Default.png */; };
 		1FB3CC5916FE48170020026A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5616FE48170020026A /* Default@2x.png */; };
@@ -124,6 +131,12 @@
 		1F2878CD16FF478D00929E82 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SupportingFiles/SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
 		1F40EEEA17018A50005E2C19 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Siivouspaiva/graphics/icon.png; sourceTree = "<group>"; };
 		1F40EEEB17018A50005E2C19 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Siivouspaiva/graphics/icon@2x.png"; sourceTree = "<group>"; };
+		1F4B1596170CADB100B849B2 /* bt-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bt-link.png"; path = "Siivouspaiva/graphics/bt-link.png"; sourceTree = "<group>"; };
+		1F4B1597170CADB100B849B2 /* bt-link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bt-link@2x.png"; path = "Siivouspaiva/graphics/bt-link@2x.png"; sourceTree = "<group>"; };
+		1F4B1598170CADB100B849B2 /* bt-share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bt-share.png"; path = "Siivouspaiva/graphics/bt-share.png"; sourceTree = "<group>"; };
+		1F4B1599170CADB100B849B2 /* bt-share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bt-share@2x.png"; path = "Siivouspaiva/graphics/bt-share@2x.png"; sourceTree = "<group>"; };
+		1F4B159A170CADB100B849B2 /* button-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-background.png"; path = "Siivouspaiva/graphics/button-background.png"; sourceTree = "<group>"; };
+		1F4B159B170CADB100B849B2 /* button-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-background@2x.png"; path = "Siivouspaiva/graphics/button-background@2x.png"; sourceTree = "<group>"; };
 		1F5677D61700C0A000180A39 /* navigation-controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller.png"; path = "Siivouspaiva/graphics/navigation-controller.png"; sourceTree = "<group>"; };
 		1F5677D71700C0A000180A39 /* navigation-controller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller@2x.png"; path = "Siivouspaiva/graphics/navigation-controller@2x.png"; sourceTree = "<group>"; };
 		1F5677DA1700C26D00180A39 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = Siivouspaiva/graphics/empty.png; sourceTree = "<group>"; };
@@ -173,6 +186,8 @@
 		1F66CFCE170B747E00E23FF7 /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star@2x.png"; path = "Siivouspaiva/graphics/icon-star@2x.png"; sourceTree = "<group>"; };
 		1FA317CA1701EDD800E535DA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1FA317CB1701EDD800E535DA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1FB32F41170D91FB00E6FEC6 /* WebLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLinkViewController.h; sourceTree = "<group>"; };
+		1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebLinkViewController.m; sourceTree = "<group>"; };
 		1FB3CC5416FE48170020026A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Siivouspaiva/graphics/Default-568h@2x.png"; sourceTree = "<group>"; };
 		1FB3CC5516FE48170020026A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Siivouspaiva/graphics/Default.png; sourceTree = "<group>"; };
 		1FB3CC5616FE48170020026A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Siivouspaiva/graphics/Default@2x.png"; sourceTree = "<group>"; };
@@ -250,6 +265,8 @@
 				1FDC3F9B16FD2E8200465AA2 /* SecondViewController.m */,
 				1F1E234717009AE600312AE3 /* ThirdViewController.h */,
 				1F1E234817009AE600312AE3 /* ThirdViewController.m */,
+				1FB32F41170D91FB00E6FEC6 /* WebLinkViewController.h */,
+				1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -257,6 +274,12 @@
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1F4B1596170CADB100B849B2 /* bt-link.png */,
+				1F4B1597170CADB100B849B2 /* bt-link@2x.png */,
+				1F4B1598170CADB100B849B2 /* bt-share.png */,
+				1F4B1599170CADB100B849B2 /* bt-share@2x.png */,
+				1F4B159A170CADB100B849B2 /* button-background.png */,
+				1F4B159B170CADB100B849B2 /* button-background@2x.png */,
 				1FB3CC5416FE48170020026A /* Default-568h@2x.png */,
 				1FB3CC5516FE48170020026A /* Default.png */,
 				1FB3CC5616FE48170020026A /* Default@2x.png */,
@@ -506,6 +529,12 @@
 				1F66CFD0170B747E00E23FF7 /* icon-star-active@2x.png in Resources */,
 				1F66CFD1170B747E00E23FF7 /* icon-star.png in Resources */,
 				1F66CFD2170B747E00E23FF7 /* icon-star@2x.png in Resources */,
+				1F4B159C170CADB100B849B2 /* bt-link.png in Resources */,
+				1F4B159D170CADB100B849B2 /* bt-link@2x.png in Resources */,
+				1F4B159E170CADB100B849B2 /* bt-share.png in Resources */,
+				1F4B159F170CADB100B849B2 /* bt-share@2x.png in Resources */,
+				1F4B15A0170CADB100B849B2 /* button-background.png in Resources */,
+				1F4B15A1170CADB100B849B2 /* button-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +568,7 @@
 				1FECE74C17021A8D00B823A0 /* CustomSegueLeft.m in Sources */,
 				1F6568191705E2950071930F /* spSingleEvent.m in Sources */,
 				1F66CFAA170B1CD800E23FF7 /* BasicNavigationBar.m in Sources */,
+				1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
