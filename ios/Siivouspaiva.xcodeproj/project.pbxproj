@@ -76,6 +76,11 @@
 		1F66CFD0170B747E00E23FF7 /* icon-star-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F66CFCC170B747E00E23FF7 /* icon-star-active@2x.png */; };
 		1F66CFD1170B747E00E23FF7 /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F66CFCD170B747E00E23FF7 /* icon-star.png */; };
 		1F66CFD2170B747E00E23FF7 /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F66CFCE170B747E00E23FF7 /* icon-star@2x.png */; };
+		1F7236A1170F1D8000349A34 /* Colaborate Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F72369C170F1D8000349A34 /* Colaborate Bold.otf */; };
+		1F7236A2170F1D8000349A34 /* Colaborate Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F72369D170F1D8000349A34 /* Colaborate Light.otf */; };
+		1F7236A3170F1D8000349A34 /* Colaborate Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F72369E170F1D8000349A34 /* Colaborate Medium.otf */; };
+		1F7236A4170F1D8000349A34 /* Colaborate Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F72369F170F1D8000349A34 /* Colaborate Regular.otf */; };
+		1F7236A5170F1D8000349A34 /* Colaborate Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236A0170F1D8000349A34 /* Colaborate Thin.otf */; };
 		1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA317CB1701EDD800E535DA /* DetailViewController.m */; };
 		1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
@@ -184,6 +189,11 @@
 		1F66CFCC170B747E00E23FF7 /* icon-star-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star-active@2x.png"; path = "Siivouspaiva/graphics/icon-star-active@2x.png"; sourceTree = "<group>"; };
 		1F66CFCD170B747E00E23FF7 /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star.png"; path = "Siivouspaiva/graphics/icon-star.png"; sourceTree = "<group>"; };
 		1F66CFCE170B747E00E23FF7 /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star@2x.png"; path = "Siivouspaiva/graphics/icon-star@2x.png"; sourceTree = "<group>"; };
+		1F72369C170F1D8000349A34 /* Colaborate Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Colaborate Bold.otf"; path = "SupportingFiles/Fonts/Colaborate Bold.otf"; sourceTree = "<group>"; };
+		1F72369D170F1D8000349A34 /* Colaborate Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Colaborate Light.otf"; path = "SupportingFiles/Fonts/Colaborate Light.otf"; sourceTree = "<group>"; };
+		1F72369E170F1D8000349A34 /* Colaborate Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Colaborate Medium.otf"; path = "SupportingFiles/Fonts/Colaborate Medium.otf"; sourceTree = "<group>"; };
+		1F72369F170F1D8000349A34 /* Colaborate Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Colaborate Regular.otf"; path = "SupportingFiles/Fonts/Colaborate Regular.otf"; sourceTree = "<group>"; };
+		1F7236A0170F1D8000349A34 /* Colaborate Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Colaborate Thin.otf"; path = "SupportingFiles/Fonts/Colaborate Thin.otf"; sourceTree = "<group>"; };
 		1FA317CA1701EDD800E535DA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1FA317CB1701EDD800E535DA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1FB32F41170D91FB00E6FEC6 /* WebLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLinkViewController.h; sourceTree = "<group>"; };
@@ -269,6 +279,18 @@
 				1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		1F72369B170F1AF000349A34 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1F72369C170F1D8000349A34 /* Colaborate Bold.otf */,
+				1F72369D170F1D8000349A34 /* Colaborate Light.otf */,
+				1F72369E170F1D8000349A34 /* Colaborate Medium.otf */,
+				1F72369F170F1D8000349A34 /* Colaborate Regular.otf */,
+				1F7236A0170F1D8000349A34 /* Colaborate Thin.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		1FB3CC5316FE47BE0020026A /* Graphics */ = {
@@ -385,6 +407,7 @@
 		1FDC3F7F16FD2E8100465AA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F72369B170F1AF000349A34 /* Fonts */,
 				1FDC3FA916FD2EFF00465AA2 /* SBJson */,
 				1FDC3F8016FD2E8100465AA2 /* Siivouspaiva-Info.plist */,
 				1FDC3F8116FD2E8100465AA2 /* InfoPlist.strings */,
@@ -535,6 +558,11 @@
 				1F4B159F170CADB100B849B2 /* bt-share@2x.png in Resources */,
 				1F4B15A0170CADB100B849B2 /* button-background.png in Resources */,
 				1F4B15A1170CADB100B849B2 /* button-background@2x.png in Resources */,
+				1F7236A1170F1D8000349A34 /* Colaborate Bold.otf in Resources */,
+				1F7236A2170F1D8000349A34 /* Colaborate Light.otf in Resources */,
+				1F7236A3170F1D8000349A34 /* Colaborate Medium.otf in Resources */,
+				1F7236A4170F1D8000349A34 /* Colaborate Regular.otf in Resources */,
+				1F7236A5170F1D8000349A34 /* Colaborate Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "spSingleEvent.h"
 
-@interface DetailViewController : UIViewController <MKMapViewDelegate>
+@interface DetailViewController : UIViewController <UITableViewDelegate, MKMapViewDelegate>
 {
     IBOutlet UIButton *buttonLinkToEvent;
     IBOutlet UIButton *buttonShareEvent;
@@ -19,9 +19,13 @@
     IBOutlet UINavigationItem *mainNaviagtionTitle;
     IBOutlet UITextView *eventDescriptionField;
     
+    
 }
-@property (nonatomic, strong) IBOutlet MKMapView *_mapViewDetail;
+@property (strong) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) spSingleEvent *detailEvent;
+@property (strong) IBOutlet UITableView *tableView;
+@property (strong) IBOutlet UIView *headerView;
+@property (strong) IBOutlet UIView *infoContainer;
 
 - (IBAction)sendPost:(id)sender;
 

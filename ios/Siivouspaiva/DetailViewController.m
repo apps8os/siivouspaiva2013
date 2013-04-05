@@ -15,15 +15,26 @@
 @end
 
 @implementation DetailViewController
-@synthesize _mapViewDetail;
+@synthesize tableView = _tableView;
+@synthesize headerView;
+@synthesize mapView = _mapView;
+@synthesize infoContainer;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [headerView removeFromSuperview];
+    self.tableView.tableHeaderView = headerView;
     
-    self._mapViewDetail.delegate = self;
+    self.mapView.delegate = self;
+    
+    
+    //infoContainer.height = descriptionLabel.y+descriptionLabel.height+20;
+    //headerView.frame.size.height = infoContainer.frame.origin.y+infoContainer.frame.size.height;
+    
+    self.tableView.tableHeaderView = headerView;
     
     // star Button
     UIButton *starButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -49,7 +60,13 @@
         addressString = [addressString stringByReplacingOccurrencesOfString:@", Finland"
                                                                  withString:@""];
         addressText.text = addressString;
+        //addressText.adjustsFontSizeToFitWidth = YES;
+        //addressText.font = [UIFont fontWithName:@"Colaborate Bold" size:15];
+        
+        // Event Discription
         eventDescriptionField.text = self.detailEvent.description;
+        //eventDescriptionField.font = [UIFont fontWithName:@"Colaborate Regular" size:15];
+        
         mainNaviagtionTitle.title = @" ";
         
         // link setting
@@ -75,14 +92,20 @@
         // Center Map to Event-Location
         CLLocationCoordinate2D eventLocation = CLLocationCoordinate2DMake([self.detailEvent.latitude doubleValue], [self.detailEvent.longitude doubleValue]);
         MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(eventLocation, 400, 400);
-        [_mapViewDetail setRegion:viewRegion animated:NO];
+        [self.mapView setRegion:viewRegion animated:NO];
         
         // Add Event Annotation
         eventSpot *annotation = [[eventSpot alloc] initWithName:self.detailEvent.eventName address:nil coordinate:eventLocation identifier:nil];
-        [_mapViewDetail addAnnotation:annotation];
+        [self.mapView addAnnotation:annotation];
         
     }
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 // set custom annotation image
 - (MKAnnotationView *)mapView:(MKMapView *)newMapView viewForAnnotation:(id )newAnnotation {
     MKAnnotationView *a = [ [ MKAnnotationView alloc ] initWithAnnotation:newAnnotation reuseIdentifier:@"currentloc"];
@@ -110,6 +133,61 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.tableView) {
+        CGFloat mapViewBaselineY = -(self.mapView.frame.size.height-150)/2+500;
+        CGFloat y = mapViewBaselineY + scrollView.contentOffset.y/2;
+        self.mapView.frame = CGRectMake(0, y, self.mapView.frame.size.width, self.mapView.frame.size.height);
+    }
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return nil;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return ([self tableView:tableView titleForHeaderInSection:section] != nil) ? 20 : 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *header = [[UIView alloc] init];
+    
+    return header;
+}
+
+
+ 
 
 #pragma mark - Seque
 
