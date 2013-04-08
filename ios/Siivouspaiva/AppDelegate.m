@@ -23,16 +23,6 @@
     NSLog(@"Finished launching");
     self.events = [NSMutableArray array];
     
-    /*
-    NetworkStatus netStatus = [hostReach currentReachabilityStatus];
-    if (netStatus == NotReachable) {
-        
-    } else {
-        [self getData];
-    }
-    
-    // load events
-    */
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reachabilityChanged:)
@@ -46,6 +36,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             //blockLabel.text = @"Block Says Reachable";
             NSLog(@"Block Says Reachable");
+            [self getData];
         });
     };
     
