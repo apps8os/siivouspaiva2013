@@ -17,7 +17,8 @@
     IBOutlet UILabel *titleText;
     IBOutlet UILabel *addressText;
     IBOutlet UINavigationItem *mainNaviagtionTitle;
-    IBOutlet UITextView *eventDescriptionField;
+    IBOutlet UILabel *eventDescriptionField;
+    IBOutlet UIImageView *timeSlider;
     
     
 }
@@ -26,6 +27,7 @@
 @property (strong) IBOutlet UITableView *tableView;
 @property (strong) IBOutlet UIView *headerView;
 @property (strong) IBOutlet UIView *infoContainer;
+@property (strong) IBOutlet UIView *timeInfoView;
 
 - (IBAction)sendPost:(id)sender;
 

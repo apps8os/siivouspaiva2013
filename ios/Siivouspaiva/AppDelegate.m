@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "spSingleEvent.h"
 
+@interface AppDelegate (private)
+
+-(void)reachabilityChanged:(NSNotification*)note;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,11 +22,61 @@
     // Override point for customization after application launch.
     NSLog(@"Finished launching");
     self.events = [NSMutableArray array];
-    [self getData];
+    
+    /*
+    NetworkStatus netStatus = [hostReach currentReachabilityStatus];
+    if (netStatus == NotReachable) {
+        
+    } else {
+        [self getData];
+    }
+    
     // load events
+    */
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    Reachability * reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    reach.reachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //blockLabel.text = @"Block Says Reachable";
+            NSLog(@"Block Says Reachable");
+        });
+    };
+    
+    reach.unreachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //blockLabel.text = @"Block Says Unreachable";
+            NSLog(@"Block Says Unreachable");
+        });
+    };
+    
+    [reach startNotifier];
+    
     
     return YES;    
 }
+
+
+-(void)reachabilityChanged:(NSNotification*)note
+{
+    Reachability * reach = [note object];
+    
+    if([reach isReachable])
+    {
+    }
+    else
+    {
+    }
+}
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -83,6 +83,16 @@
                                                       forState:UIControlStateHighlighted
                                                     barMetrics:UIBarMetricsDefault];
     
+    /* Fonts Working
+    UIFont* font1 = [UIFont fontWithName:@"colaborate-medium" size:20];
+    UIFont* font2 = [UIFont fontWithName:@"colaboratelight" size:20];
+    UIFont* font3 = [UIFont fontWithName:@"colaborate-bold" size:20];
+    UIFont* font4 = [UIFont fontWithName:@"colaborate-regular" size:20];
+    UIFont* font5 = [UIFont fontWithName:@"colaborate-thin" size:20];
+    */
+    
+    
+    
 }
 
 

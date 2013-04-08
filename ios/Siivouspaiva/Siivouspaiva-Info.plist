@@ -61,8 +61,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Colaborate Regular.otf</string>
-		<string>Colaborate Bold.otf</string>
+		<string>colaboratemedium.ttf</string>
+		<string>colaboratelight.ttf</string>
+        <string>colaboratebold.ttf</string>
+        <string>colaboratethin.ttf</string>
+        <string>colaborateregular.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
