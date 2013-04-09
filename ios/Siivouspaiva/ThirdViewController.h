@@ -10,6 +10,6 @@
 
 @interface ThirdViewController : UIViewController
 {
-    IBOutlet UIButton *mybutton;
+
 }
 @end

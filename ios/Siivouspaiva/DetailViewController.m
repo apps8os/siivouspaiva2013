@@ -43,11 +43,11 @@
     
     // star Button
     UIButton *starButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *starButtonImage = [UIImage imageNamed:@"icon-star"];
-    UIImage *starButtonImagePressed = [UIImage imageNamed:@"icon-star-active"];
+    UIImage *starButtonImage = [UIImage imageNamed:@"icon-star-line"];
+    UIImage *starButtonImagePressed = [UIImage imageNamed:@"icon-star-line-active"];
     [starButton setBackgroundImage:starButtonImage forState:UIControlStateNormal];
     [starButton setBackgroundImage:starButtonImagePressed forState:UIControlStateHighlighted];
-    [starButton addTarget:self action:@selector(self) forControlEvents:UIControlEventTouchUpInside]; // add staring function!
+    [starButton addTarget:self action:@selector(starringAction) forControlEvents:UIControlEventTouchUpInside]; // add staring function!
     starButton.frame = CGRectMake(0, 0, 45, 44);
     UIView *starButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 45, 44)];
     starButtonView.bounds = CGRectOffset(starButtonView.bounds, -5, 0);
@@ -140,6 +140,14 @@
 {
     [super viewWillAppear:animated];
 }
+
+- (void)starringAction
+{
+    NSLog(@"Element starred");
+    //add Element to strred list
+    // chnage icon image
+}
+
 
 
 // set custom annotation image

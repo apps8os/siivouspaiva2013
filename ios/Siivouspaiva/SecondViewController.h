@@ -12,4 +12,5 @@
 {
     IBOutlet UITableView *eventListTable;
 }
+
 @end

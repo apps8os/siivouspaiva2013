@@ -89,6 +89,10 @@
 		1F7236C51711C19600349A34 /* time-slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236C31711C19600349A34 /* time-slider@2x.png */; };
 		1F7236C81712A22600349A34 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7236C71712A22500349A34 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F7236CA1712B62300349A34 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7236C91712B62200349A34 /* SystemConfiguration.framework */; };
+		1F7236D617143BCC00349A34 /* icon-star-line-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236D217143BCC00349A34 /* icon-star-line-active.png */; };
+		1F7236D717143BCC00349A34 /* icon-star-line-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236D317143BCC00349A34 /* icon-star-line-active@2x.png */; };
+		1F7236D817143BCC00349A34 /* icon-star-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236D417143BCC00349A34 /* icon-star-line.png */; };
+		1F7236D917143BCC00349A34 /* icon-star-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236D517143BCC00349A34 /* icon-star-line@2x.png */; };
 		1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA317CB1701EDD800E535DA /* DetailViewController.m */; };
 		1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB32F42170D91FB00E6FEC6 /* WebLinkViewController.m */; };
 		1FB3CC5716FE48170020026A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB3CC5416FE48170020026A /* Default-568h@2x.png */; };
@@ -213,6 +217,10 @@
 		1F7236C91712B62200349A34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F7236CB1713FA6F00349A34 /* fi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fi; path = fi.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1F7236CC1713FA6F00349A34 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F7236D217143BCC00349A34 /* icon-star-line-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star-line-active.png"; path = "Siivouspaiva/graphics/icon-star-line-active.png"; sourceTree = "<group>"; };
+		1F7236D317143BCC00349A34 /* icon-star-line-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star-line-active@2x.png"; path = "Siivouspaiva/graphics/icon-star-line-active@2x.png"; sourceTree = "<group>"; };
+		1F7236D417143BCC00349A34 /* icon-star-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star-line.png"; path = "Siivouspaiva/graphics/icon-star-line.png"; sourceTree = "<group>"; };
+		1F7236D517143BCC00349A34 /* icon-star-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-star-line@2x.png"; path = "Siivouspaiva/graphics/icon-star-line@2x.png"; sourceTree = "<group>"; };
 		1FA317CA1701EDD800E535DA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1FA317CB1701EDD800E535DA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1FB32F41170D91FB00E6FEC6 /* WebLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLinkViewController.h; sourceTree = "<group>"; };
@@ -317,6 +325,10 @@
 			isa = PBXGroup;
 			children = (
 				1F7236C21711C19600349A34 /* time-slider.png */,
+				1F7236D217143BCC00349A34 /* icon-star-line-active.png */,
+				1F7236D317143BCC00349A34 /* icon-star-line-active@2x.png */,
+				1F7236D417143BCC00349A34 /* icon-star-line.png */,
+				1F7236D517143BCC00349A34 /* icon-star-line@2x.png */,
 				1F7236C31711C19600349A34 /* time-slider@2x.png */,
 				1F7236BE171198A100349A34 /* line-shadow.png */,
 				1F7236BF171198A100349A34 /* line-shadow@2x.png */,
@@ -599,6 +611,10 @@
 				1F7236C1171198A100349A34 /* line-shadow@2x.png in Resources */,
 				1F7236C41711C19600349A34 /* time-slider.png in Resources */,
 				1F7236C51711C19600349A34 /* time-slider@2x.png in Resources */,
+				1F7236D617143BCC00349A34 /* icon-star-line-active.png in Resources */,
+				1F7236D717143BCC00349A34 /* icon-star-line-active@2x.png in Resources */,
+				1F7236D817143BCC00349A34 /* icon-star-line.png in Resources */,
+				1F7236D917143BCC00349A34 /* icon-star-line@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
