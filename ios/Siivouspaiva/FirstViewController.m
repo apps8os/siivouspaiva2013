@@ -110,8 +110,10 @@
     self.eventsData = appDelegate.events;
     NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
     //NSLog(@"Eventsdata total: %@", self.eventsData);
-
-    //[self updateAnnotations];
+    
+    if (self.didFinishLoadingMap == YES) {
+        [self updateAnnotations];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -185,6 +187,10 @@
             [self updateAnnotations];
         }
     } else if (tempMapSpan > (self.lastUpdateSpan*2) ) {
+        if (self.eventsData) {
+            [self updateAnnotations];
+        }
+    } else if (tempDistance*4 < self.lastUpdateSpan) {
         if (self.eventsData) {
             [self updateAnnotations];
         }
