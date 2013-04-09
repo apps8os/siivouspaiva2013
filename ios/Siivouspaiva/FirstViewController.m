@@ -17,6 +17,8 @@
 @interface FirstViewController ()
 @property (strong) NSMutableArray *eventsData;
 @property CLLocationCoordinate2D lastUpdateLocation;
+@property float lastUpdateSpan;
+@property BOOL didFinishLoadingMap;
 
 @end
 
@@ -38,6 +40,7 @@
 
     
     self._mapView.delegate = self;
+    self.didFinishLoadingMap = NO;
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 60.170208;
@@ -123,6 +126,16 @@
     
 }
 
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+{
+    NSLog(@"Finished map loading");
+    if (self.didFinishLoadingMap == NO) {
+        self.didFinishLoadingMap = YES;
+        [self updateAnnotations];
+    }
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 
@@ -158,19 +171,25 @@
 {
     MKCoordinateRegion region = [mapView region];
     
-    //NSLog(@"Region DID change.   Center is now %f,%f,  Deltas=%f,%f", region.center.latitude, region.center.longitude, region.span.latitudeDelta, region.span.longitudeDelta);
+    NSLog(@"Region DID change.   Center is now %f,%f,  Deltas=%f,%f", region.center.latitude, region.center.longitude, region.span.latitudeDelta, region.span.longitudeDelta);
     CLLocation *lastUpdate = [[CLLocation alloc] initWithLatitude:self.lastUpdateLocation.latitude longitude:self.lastUpdateLocation.longitude];
     CLLocation *tempLocation = [[CLLocation alloc] initWithLatitude:region.center.latitude longitude:region.center.longitude];
     CLLocationDistance tempDistance = [lastUpdate distanceFromLocation: tempLocation];
     NSLog(@"DistanceLocation: %f", tempDistance);
     double currentMapVisible = region.span.latitudeDelta*111000/2;
+    float tempMapSpan = region.span.latitudeDelta;
     //NSLog(@"My map shows: %f", currentMapVisible);
     
     if (tempDistance > currentMapVisible) {
         if (self.eventsData) {
             [self updateAnnotations];
         }
+    } else if (tempMapSpan > (self.lastUpdateSpan*2) ) {
+        if (self.eventsData) {
+            [self updateAnnotations];
+        }
     }
+    
     
 
 }
@@ -187,6 +206,7 @@
     float mapLonMax = centerLocation.longitude + mapRegion.span.longitudeDelta;
     
     self.lastUpdateLocation = centerLocation;
+    self.lastUpdateSpan = (float) mapRegion.span.latitudeDelta;
     
     //search through data for events on current map view
     //if (self.eventsData) {

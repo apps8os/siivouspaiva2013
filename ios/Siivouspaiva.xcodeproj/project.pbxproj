@@ -211,6 +211,8 @@
 		1F7236C61712A22500349A34 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1F7236C71712A22500349A34 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1F7236C91712B62200349A34 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F7236CB1713FA6F00349A34 /* fi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fi; path = fi.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1F7236CC1713FA6F00349A34 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FA317CA1701EDD800E535DA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1FA317CB1701EDD800E535DA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1FB32F41170D91FB00E6FEC6 /* WebLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLinkViewController.h; sourceTree = "<group>"; };
@@ -384,10 +386,6 @@
 		1FDC3F6C16FD2E8100465AA2 = {
 			isa = PBXGroup;
 			children = (
-				1F7236C91712B62200349A34 /* SystemConfiguration.framework */,
-				1FECE74D17021B8C00B823A0 /* QuartzCore.framework */,
-				1FDC3FD716FE220900465AA2 /* MapKit.framework */,
-				1FDC3FD516FE220300465AA2 /* CoreLocation.framework */,
 				1FDC3F7E16FD2E8100465AA2 /* Siivouspaiva */,
 				1FDC3F7716FD2E8100465AA2 /* Frameworks */,
 				1FDC3F7616FD2E8100465AA2 /* Products */,
@@ -405,6 +403,10 @@
 		1FDC3F7716FD2E8100465AA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F7236C91712B62200349A34 /* SystemConfiguration.framework */,
+				1FECE74D17021B8C00B823A0 /* QuartzCore.framework */,
+				1FDC3FD716FE220900465AA2 /* MapKit.framework */,
+				1FDC3FD516FE220300465AA2 /* CoreLocation.framework */,
 				1FDC3F7816FD2E8100465AA2 /* UIKit.framework */,
 				1FDC3F7A16FD2E8100465AA2 /* Foundation.framework */,
 				1FDC3F7C16FD2E8100465AA2 /* CoreGraphics.framework */,
@@ -511,6 +513,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fi,
 			);
 			mainGroup = 1FDC3F6C16FD2E8100465AA2;
 			productRefGroup = 1FDC3F7616FD2E8100465AA2 /* Products */;
@@ -641,6 +644,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1FDC3F8216FD2E8100465AA2 /* en */,
+				1F7236CC1713FA6F00349A34 /* fi */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -649,6 +653,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1FDC3F9116FD2E8200465AA2 /* en */,
+				1F7236CB1713FA6F00349A34 /* fi */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

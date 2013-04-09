@@ -37,12 +37,8 @@
     
     self.mapView.delegate = self;
     
-    
     //infoContainer.height = descriptionLabel.y+descriptionLabel.height+20;
     //headerView.frame.size.height = infoContainer.frame.origin.y+infoContainer.frame.size.height;
-    
-    self.tableView.tableHeaderView = headerView;
-    
     
     
     // star Button
