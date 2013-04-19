@@ -173,7 +173,7 @@
     NSLog(@"Last Event ext ID: %@", [self.events.lastObject idNumber]);
     
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
-
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
 
 }

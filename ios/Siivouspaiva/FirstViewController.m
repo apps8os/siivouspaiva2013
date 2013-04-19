@@ -123,7 +123,7 @@
         NSLog(@"Wait for Data");
     } else {
         NSLog(@"Run Pins ");
-        [self updateAnnotations];
+        //[self updateAnnotations];
     }
     
 }
