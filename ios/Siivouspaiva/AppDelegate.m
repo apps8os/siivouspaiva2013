@@ -137,6 +137,8 @@
 
 - (void)convertDataToEvents:(NSArray *)responseData
 {
+    //NSLog(@"current database: %@", responseData);
+    
     for (int i = 0; i < [responseData count]; i++) {
         NSDictionary* singleEvent = [responseData objectAtIndex:i];
         
@@ -154,6 +156,7 @@
         NSNumber *endHour = [singleEvent objectForKey:@"end_hour"];
         NSNumber *endMinute = [singleEvent objectForKey:@"end_minute"];
         
+        //NSLog(@"Event tags: %@", tags);
         spSingleEvent *newEvent = [spSingleEvent eventWithName:name
                                                        address:address
                                                    description:description
@@ -168,9 +171,10 @@
                                                      longitude:longitude];
         [self.events addObject:newEvent];
         //NSLog(@"Event added with ID: %@",newEvent.idNumber);
+        //NSLog(@"Event tags: %@",newEvent.tags);
     }
     
-    NSLog(@"Last Event ext ID: %@", [self.events.lastObject idNumber]);
+    //NSLog(@"Last Event ext ID: %@", [self.events.lastObject idNumber]);
     
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

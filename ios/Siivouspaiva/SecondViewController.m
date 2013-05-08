@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "spSingleEvent.h"
 #import "DetailViewController.h"
+#import "MainListCell.h"
 
 
 @interface SecondViewController ()
@@ -76,13 +77,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
+    MainListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell" forIndexPath:indexPath];
     
     
     spSingleEvent *event = self.eventsData[indexPath.row];
     
-    cell.textLabel.text = event.eventName;
-    cell.detailTextLabel.text = event.eventAddress;
+    cell.titleLabel.text = event.eventName;
+    cell.titleLabel.font = [UIFont fontWithName:@"colaborate-regular" size:17];
+    
+    NSString* eventTagsString = event.tags;
+    if ([eventTagsString isEqualToString:@""]) {
+        eventTagsString = @"Other";
+    } else {
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"n" withString:@"Other"];
+        //eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"r" withString:@"Recycling center"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"0" withString:@"Clothes,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"1" withString:@"Children's clothing,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"2" withString:@"Furniture,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"3" withString:@"Household accessories,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"4" withString:@"Toys and games,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"5" withString:@"Technology,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"6" withString:@"Music,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"7" withString:@"Movies,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"8" withString:@"Books,"];
+        eventTagsString = [eventTagsString stringByReplacingOccurrencesOfString:@"9" withString:@"Repair services,"];
+    }
+    cell.tagsLabel.text = eventTagsString;
+    cell.tagsLabel.font = [UIFont fontWithName:@"colaborate-regular" size:14];
+    
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setPositiveFormat:@"00.#"];
+    NSString* openingTimes = @"Open ";
+    openingTimes = [openingTimes stringByAppendingString:[NSString stringWithFormat:@"%i", [event.beginHour intValue]]];
+    openingTimes = [openingTimes stringByAppendingString:@":"];
+    openingTimes = [openingTimes stringByAppendingString:[numberFormatter stringFromNumber: [NSNumber numberWithInt:[event.beginMinute intValue]]]];
+    openingTimes = [openingTimes stringByAppendingString:@" to "];
+    openingTimes = [openingTimes stringByAppendingString:[NSString stringWithFormat:@"%i", [event.endHour intValue]]];
+    openingTimes = [openingTimes stringByAppendingString:@":"];
+    openingTimes = [openingTimes stringByAppendingString:[numberFormatter stringFromNumber: [NSNumber numberWithInt:[event.endMinute intValue]]]];
+    cell.timeLabel.text = openingTimes;
+    cell.timeLabel.font = [UIFont fontWithName:@"colaborate-regular" size:14];
+    //NSLog(@"event.BeginHour: %@", hourstring);
+    
+    cell.distanceLabel.text = @"? km";
+    cell.distanceLabel.font = [UIFont fontWithName:@"colaborate-regular" size:14];
     
     return cell;
 }

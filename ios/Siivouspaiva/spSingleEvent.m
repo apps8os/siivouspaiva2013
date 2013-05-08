@@ -22,6 +22,7 @@
     singleEvent.endHour = inEndHour;
     singleEvent.endMinute = inEndMinute;
     singleEvent.idNumber = inIDNumber;
+    singleEvent.tags = inTags;
     singleEvent.link = inLink;
     singleEvent.latitude = inLatitude;
     singleEvent.longitude = inLongitude;

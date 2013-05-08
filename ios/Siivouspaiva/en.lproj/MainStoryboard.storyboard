@@ -347,36 +347,66 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Te6-fA-hTO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="Te6-fA-hTO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" textLabel="2DU-Ps-O2Q" detailTextLabel="DLl-tu-GFa" style="IBUITableViewCellStyleSubtitle" id="08a-bm-ej8">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="90" id="08a-bm-ej8" customClass="MainListCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2DU-Ps-O2Q">
-                                                    <rect key="frame" x="10" y="2" width="38" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eaB-8s-Wyc">
+                                                    <rect key="frame" x="14" y="8" width="286" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DLl-tu-GFa">
-                                                    <rect key="frame" x="10" y="24" width="47" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nyE-Vj-6OU">
+                                                    <rect key="frame" x="38" y="34" width="242" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xkf-8I-MMd">
+                                                    <rect key="frame" x="38" y="60" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x2Q-yk-Mgr">
+                                                    <rect key="frame" x="209" y="58" width="71" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="cat-labels.png" id="Ia8-ss-1Wg">
+                                                    <rect key="frame" x="14" y="37" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-time.png" id="Tt0-vn-nFx">
+                                                    <rect key="frame" x="14" y="63" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-distance.png" id="YDz-Xj-6nB">
+                                                    <rect key="frame" x="185" y="61" width="16" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="distanceLabel" destination="x2Q-yk-Mgr" id="iga-Mg-8jH"/>
+                                            <outlet property="tagsLabel" destination="nyE-Vj-6OU" id="h2E-M2-h75"/>
+                                            <outlet property="timeLabel" destination="Xkf-8I-MMd" id="kTr-AE-PMp"/>
+                                            <outlet property="titleLabel" destination="eaB-8s-Wyc" id="T7j-Hz-HNj"/>
                                             <segue destination="QZd-Xx-Hak" kind="push" identifier="PushToDetailsView" id="PDb-iR-vaQ"/>
                                         </connections>
                                     </tableViewCell>
@@ -478,343 +508,106 @@
         <!--Fourth View Controller - Fourth-->
         <scene sceneID="xkg-Cx-Axh">
             <objects>
-                <viewController id="Kkb-qm-PhF" userLabel="Fourth View Controller - Fourth" sceneMemberID="viewController">
+                <viewController id="Kkb-qm-PhF" userLabel="Fourth View Controller - Fourth" customClass="InfoScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhD-3C-taS">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="siivouspaiva-logo.png" id="qdo-1t-zqq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" id="gSg-2A-hmf">
-                                <rect key="frame" x="20" y="98" width="280" height="290"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qli-m3-5bT">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Siivouspäivä is a new day of celebration for friends of flea markets and recycling. The neatest festival of the year turns cities and neighborhoods into giant secondhand markets. Anyone can offer their secondhand items up for sale on the streets, yards and at home, as well as make the neighborhood’s best finds.
-The idea of Siivouspäivä is to make recycling easy - one man's trash is another man's treasure - as well as creating dynamic and responsible urban culture. Siivouspäivä has no official organizer, each participant herself acts as an event organizer. Everybody is responsible for cleaning up after themselves.
-In Helsinki, several recycling stations are placed around the city and they are open for everyone, free of charge.
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="bottom" image="info-bg.png" id="GeH-fE-N0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="siivouspaiva-logo.png" id="qdo-1t-zqq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="gSg-2A-hmf">
+                                        <rect key="frame" x="20" y="88" width="280" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Siivouspäivä is a day of celebration for friends of flea markets and recycling. The neatest festival of the year turns cities and neighborhoods into giant secondhand markets. Anyone can offer their secondhand items up for sale on the streets, yards and at home, as well as make the neighborhood’s best finds. More info: http://siivouspaiva.com/
 </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
+                                        <color key="textColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" image="aalto-logo.png" id="p59-dG-8et">
+                                        <rect key="frame" x="40" y="445" width="240" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Software Design:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMi-hN-AMf">
+                                        <rect key="frame" x="20" y="253" width="123" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Interface Design:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UFA-Yd-i1c">
+                                        <rect key="frame" x="20" y="280" width="123" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks to:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTl-vD-roa">
+                                        <rect key="frame" x="20" y="368" width="114" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fabian Häusler " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1tS-st-HFO">
+                                        <rect key="frame" x="143" y="280" width="114" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aalto University (ASF, AMF and Media Lab)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8E-db-MMh">
+                                        <rect key="frame" x="20" y="378" width="285" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DRG-U0-5PV">
+                                        <rect key="frame" x="20" y="306" width="280" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">With input from: Dipti Sonawane, Roope Kiviranta and Tae Yong Kim
 </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">When does Siivouspäivä take place?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">The first Siivouspäivä took place on Saturday, May 12th 2012, when hundreds of Finns took to the streets, parks and yards to sell their stuff. For the second time the event took place September 8th 2012 and for third time Siivouspäivä will be on Saturday, May 25th 2013.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Where does Siivouspäivä take place?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">One can participate in Siivouspäivä anywhere in the world. However, the team behind Siivouspäivä operates from Helsinki.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Who can sell their secondhand items on Siivouspäivä?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Anyone can, either alone or together with others. Also associations and organizations such as sport clubs and non-governmental organizations can take part. However, Siivouspäivä is not open for professional secondhand sellers or selling of new products.
-Businesses are welcome to participate by offering to sell their employees' or the company's old stuff. If a company is to participate it must remember that it is forbidden to use Siivouspäivä's website map for any unrelated marketing purposes.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">How can I join?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">You can announce your sales spot by signing it in to the Siivouspäivä website's map page. It is not mandatory to tag your spot on the map, but it is recommended.
-In Helsinki, the Public Works Department has pre-approved placements of sales spots in the City’s public areas without separate permit, as long as the seller has tagged the spot on the siivouspaiva.com-website.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Where can I sell?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Basically you can sell anywhere you like: at home, on the street or the backyard, at the office, or even on a sports field. You can also join others and create larger market areas, for example, with people in the same housing area, street or neighborhood.
-When choosing your spot, remember to respect other people, the guidelines of your municipality, as well as security directions. If you choose to place your spot on the premises of your own or another housing company, please arrange it in agreement with the company.
-In Helsinki you can place your spot on a publicly owned area, such as a sidewalk, park or a square, as long as you abide to the guidelines of the Public Works Department:
-1. Sellers need to register and announce their sales spot on the siivouspaiva.com-website 2. Sales spots need to be placed on "hard" surfaces (i.e. stones, asphalt, gravel). Lawns are not to be damaged! 3. Movement of pedestrians or other traffic, or other use of the public space is not to be disturbed or hindered. 4. The seller is responsible of any damage or disturbance their sales activities might cause to the municipality or a third party. 5. It is the responsibility of each seller to ensure that items that are not sold or recycled are removed from public areas immediately after the event.
-You don't have to ask for seperate permissions any more.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">What can I sell on Siivouspäivä?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Any kind of secondhand items e.g. clothes, furniture, birdhouses, bicycles, tools, toys, books or comic books can be sold. You can also offer a related service such as repair or customization. Siivouspäivä is not open for professional secondhand sellers or retailers. No new merchandize should be sold.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">What should I consider when selling?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">The regular flea market recommendations are valid also on Siivouspäivä - use fair pricing, sell things that are in good condition, have plenty of change; and something for protection in case of rain, e.g. big waste bags to cover the items with.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">What should I do with the leftover stuff?
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.070588235294117646" green="0.2627450980392157" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="15" name="Georgia-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="20" minimumLineHeight="20" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">If it looks like there will be items left unsold, consider giving them away for free, as one purpose of the day is to clean up the home by getting rid of needless stuff. In the Helsinki region, recycling centers and circulating vehicles will be provided for leftover items.
-We also provide recycling centers to Helsinki. More information under Neatness &amp; Recycling
-Each participant is responsible for clearing away their leftovers. You should only bring things that you are ready to carry off if necessary.
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="13" name="Georgia"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9" minimumLineHeight="18" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hk1-PU-kPc">
-                                <rect key="frame" x="20" y="455" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yJl-gT-z3i">
-                                <rect key="frame" x="20" y="407" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="siivouspaiva.com">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fabian Häusler " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y15-Cy-lQR">
+                                        <rect key="frame" x="147" y="253" width="114" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="dRF-bO-qac"/>
+                    <connections>
+                        <outlet property="InfoTextView" destination="gSg-2A-hmf" id="xft-L8-7xb"/>
+                        <outlet property="LabelAaltoF" destination="p8E-db-MMh" id="NyE-4d-Ngf"/>
+                        <outlet property="LabelSWD" destination="FMi-hN-AMf" id="SZM-pA-Dlj"/>
+                        <outlet property="LabelTHT" destination="WTl-vD-roa" id="0j9-Kq-e16"/>
+                        <outlet property="LabelUID" destination="UFA-Yd-i1c" id="kTF-B2-hxD"/>
+                        <outlet property="Labeldev1" destination="y15-Cy-lQR" id="Dbz-oh-Jk5"/>
+                        <outlet property="Labeldev2" destination="1tS-st-HFO" id="DeQ-M7-5hf"/>
+                        <outlet property="Labelothers" destination="DRG-U0-5PV" id="czz-ws-OHE"/>
+                        <outlet property="contentScrollView" destination="qli-m3-5bT" id="HaV-P9-twl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jk-za-d1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -822,18 +615,105 @@ Each participant is responsible for clearing away their leftovers. You should on
         </scene>
     </scenes>
     <resources>
+        <image name="aalto-logo.png" width="111" height="90"/>
         <image name="bt-link.png" width="17" height="16"/>
         <image name="bt-share.png" width="19" height="15"/>
         <image name="button-background.png" width="145" height="40"/>
+        <image name="cat-labels.png" width="16" height="13"/>
+        <image name="icon-distance.png" width="16" height="16"/>
+        <image name="icon-time.png" width="16" height="16"/>
+        <image name="info-bg.png" width="320" height="78"/>
         <image name="line-shadow.png" width="320" height="1"/>
         <image name="locate.png" width="40" height="40"/>
         <image name="reload.png" width="40" height="40"/>
-        <image name="siivouspaiva-logo.png" width="265" height="62"/>
+        <image name="siivouspaiva-logo.png" width="230" height="47"/>
         <image name="tabicon-list.png" width="33" height="30"/>
         <image name="tabicon-map.png" width="33" height="30"/>
         <image name="time-slider-background.png" width="320" height="40"/>
         <image name="time-slider.png" width="134" height="10"/>
     </resources>
+    <classes>
+        <class className="BasicNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicNavigationBar.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myMainNavigationBar" candidateClass="UINavigationBar"/>
+            </relationships>
+        </class>
+        <class className="CustomUITabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomUITabBarController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendPost:"/>
+                <relationship kind="outlet" name="addressText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="buttonLinkToEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonShareEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="eventDescriptionField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mainNaviagtionTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timeInfoView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="timeLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel5" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel6" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel7" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeSlider" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshButton:"/>
+                <relationship kind="action" name="updateUserLocation:"/>
+                <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="InfoScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoScreenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="InfoTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="LabelAaltoF" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelSWD" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelTHT" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelUID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labeldev1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labeldev2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labelothers" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contentScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="MainListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="eventListTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WebLinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebLinkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

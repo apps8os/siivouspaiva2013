@@ -76,12 +76,15 @@
         
         mainNaviagtionTitle.title = @" ";
        
-        /*
+        
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 32)];
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+        titleLabel.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0];
+        titleLabel.text = self.detailEvent.eventName;
+        titleLabel.font = [UIFont fontWithName:@"colaborate-bold" size:20];
+        titleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
         self.navigationItem.titleView = titleLabel;
-        */
+        
         
         
         // link setting
@@ -135,7 +138,25 @@
         [self.mapView addAnnotation:annotation];
         
     }
+    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    UIImage *backBtnImage = [UIImage imageNamed:@"icon-back.png"]  ;
+    [backBtn setBackgroundImage:backBtnImage forState:UIControlStateNormal];
+    UIImage *backBtnActiveImage = [UIImage imageNamed:@"icon-back-active.png"]  ;
+    [backBtn setBackgroundImage:backBtnActiveImage forState:UIControlStateHighlighted];
+    
+    [backBtn addTarget:self action:@selector(goback) forControlEvents:UIControlEventTouchUpInside];
+    backBtn.frame = CGRectMake(0, 0, 40, 44);
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:backBtn] ;
+    self.navigationItem.leftBarButtonItem = backButton;
 }
+
+- (void)goback
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
