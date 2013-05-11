@@ -50,12 +50,6 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
     
-    /*
-    UIImage *backImage = [UIImage imageNamed: @"icon-map.png"];
-    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStylePlain target:nil action:nil];
-    btn.tintColor = [UIColor colorWithWhite:1 alpha:0];
-    self.navigationItem.backBarButtonItem = btn;
-    */
     
     // Siivouspaiva logo as Navigation Bar Title
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva.png"]];
@@ -120,9 +114,9 @@
     
     if (!self.eventsData) {
         // wait for data
-        NSLog(@"Wait for Data");
+        //NSLog(@"Wait for Data");
     } else {
-        NSLog(@"Run Pins ");
+        //NSLog(@"Run Pins ");
         //[self updateAnnotations];
     }
     

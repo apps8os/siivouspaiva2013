@@ -16,6 +16,7 @@
     __weak IBOutlet UILabel *Labeldev1;
     __weak IBOutlet UILabel *Labeldev2;
     __weak IBOutlet UILabel *Labelothers;
+    __weak IBOutlet UILabel *Labelothers2;
     __weak IBOutlet UILabel *LabelTHT;
     __weak IBOutlet UILabel *LabelAaltoF;
 }

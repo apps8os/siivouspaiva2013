@@ -514,7 +514,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qli-m3-5bT">
-                                <rect key="frame" x="0.0" y="0.0" width="325" height="499"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="bottom" image="info-bg.png" id="GeH-fE-N0K">
@@ -526,7 +526,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="gSg-2A-hmf">
-                                        <rect key="frame" x="20" y="88" width="280" height="160"/>
+                                        <rect key="frame" x="20" y="90" width="275" height="160"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <string key="text">Siivouspäivä is a day of celebration for friends of flea markets and recycling. The neatest festival of the year turns cities and neighborhoods into giant secondhand markets. Anyone can offer their secondhand items up for sale on the streets, yards and at home, as well as make the neighborhood’s best finds. More info: http://siivouspaiva.com/
 </string>
@@ -535,56 +535,63 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="top" image="aalto-logo.png" id="p59-dG-8et">
-                                        <rect key="frame" x="40" y="445" width="240" height="90"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="aalto-logo.png" id="p59-dG-8et">
+                                        <rect key="frame" x="20" y="416" width="280" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Software Design:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FMi-hN-AMf">
-                                        <rect key="frame" x="20" y="253" width="123" height="21"/>
+                                        <rect key="frame" x="20" y="260" width="123" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Interface Design:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UFA-Yd-i1c">
-                                        <rect key="frame" x="20" y="280" width="123" height="21"/>
+                                        <rect key="frame" x="20" y="287" width="123" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Thanks to:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WTl-vD-roa">
-                                        <rect key="frame" x="20" y="368" width="114" height="21"/>
+                                        <rect key="frame" x="20" y="352" width="114" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fabian Häusler " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1tS-st-HFO">
-                                        <rect key="frame" x="143" y="280" width="114" height="21"/>
+                                        <rect key="frame" x="145" y="287" width="114" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aalto University (ASF, AMF and Media Lab)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p8E-db-MMh">
-                                        <rect key="frame" x="20" y="378" width="285" height="35"/>
+                                        <rect key="frame" x="20" y="364" width="285" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DRG-U0-5PV">
-                                        <rect key="frame" x="20" y="306" width="280" height="43"/>
+                                        <rect key="frame" x="20" y="306" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">With input from: Dipti Sonawane, Roope Kiviranta and Tae Yong Kim
+                                        <string key="text">With input from: Dipti Sonawane, 
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Roope Kiviranta and Tae Yong Kim" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Toh-bX-WK2">
+                                        <rect key="frame" x="20" y="325" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fabian Häusler " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y15-Cy-lQR">
-                                        <rect key="frame" x="147" y="253" width="114" height="21"/>
+                                        <rect key="frame" x="145" y="260" width="114" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -606,6 +613,7 @@
                         <outlet property="Labeldev1" destination="y15-Cy-lQR" id="Dbz-oh-Jk5"/>
                         <outlet property="Labeldev2" destination="1tS-st-HFO" id="DeQ-M7-5hf"/>
                         <outlet property="Labelothers" destination="DRG-U0-5PV" id="czz-ws-OHE"/>
+                        <outlet property="Labelothers2" destination="Toh-bX-WK2" id="Rjc-b4-MN1"/>
                         <outlet property="contentScrollView" destination="qli-m3-5bT" id="HaV-P9-twl"/>
                     </connections>
                 </viewController>
@@ -615,7 +623,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aalto-logo.png" width="111" height="90"/>
+        <image name="aalto-logo.png" width="280" height="52"/>
         <image name="bt-link.png" width="17" height="16"/>
         <image name="bt-share.png" width="19" height="15"/>
         <image name="button-background.png" width="145" height="40"/>
@@ -632,88 +640,6 @@
         <image name="time-slider-background.png" width="320" height="40"/>
         <image name="time-slider.png" width="134" height="10"/>
     </resources>
-    <classes>
-        <class className="BasicNavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicNavigationBar.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myMainNavigationBar" candidateClass="UINavigationBar"/>
-            </relationships>
-        </class>
-        <class className="CustomUITabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomUITabBarController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myTabBar" candidateClass="UITabBar"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendPost:"/>
-                <relationship kind="outlet" name="addressText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="buttonLinkToEvent" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="buttonShareEvent" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eventDescriptionField" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="headerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="infoContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mainNaviagtionTitle" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="timeInfoView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="timeLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel4" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel5" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel6" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel7" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeSlider" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="titleText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshButton:"/>
-                <relationship kind="action" name="updateUserLocation:"/>
-                <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="InfoScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoScreenViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="InfoTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="LabelAaltoF" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="LabelSWD" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="LabelTHT" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="LabelUID" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="Labeldev1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="Labeldev2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="Labelothers" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="contentScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="MainListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="eventListTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WebLinkViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebLinkViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

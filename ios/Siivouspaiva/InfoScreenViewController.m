@@ -29,7 +29,7 @@
 	// Do any additional setup after loading the view.
     
     [contentScrollView setScrollEnabled:YES];
-    [contentScrollView setContentSize:CGSizeMake(320, 700)];
+    [contentScrollView setContentSize:CGSizeMake(320, 550)];
     
     InfoTextView.contentInset = UIEdgeInsetsMake(-4,-8,0,0);
     InfoTextView.font = [UIFont fontWithName:@"colaborate-regular" size:15];
@@ -37,6 +37,7 @@
     Labeldev1.font = [UIFont fontWithName:@"colaborate-regular" size:15];
     Labeldev2.font = [UIFont fontWithName:@"colaborate-regular" size:15];
     Labelothers.font = [UIFont fontWithName:@"colaborate-regular" size:15];
+    Labelothers2.font = [UIFont fontWithName:@"colaborate-regular" size:15];
     LabelSWD.font = [UIFont fontWithName:@"colaborate-bold" size:15];
     LabelTHT.font = [UIFont fontWithName:@"colaborate-bold" size:15];
     LabelUID.font = [UIFont fontWithName:@"colaborate-bold" size:15];
