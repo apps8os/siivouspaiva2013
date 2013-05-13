@@ -110,12 +110,12 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" id="RYe-ha-qIb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="650"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="CiJ-mK-juv">
-                                        <rect key="frame" x="0.0" y="-500" width="320" height="810"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="frame" x="0.0" y="-500" width="320" height="1080"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" id="9af-qf-1TC">
                                                 <rect key="frame" x="0.0" y="300" width="320" height="550"/>
@@ -128,7 +128,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="YNf-Uf-LEr">
-                                        <rect key="frame" x="0.0" y="150" width="320" height="500"/>
+                                        <rect key="frame" x="0.0" y="150" width="320" height="600"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="Cg4-Go-UQi">
@@ -136,13 +136,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uKV-xg-EqH">
-                                                        <rect key="frame" x="10" y="13" width="301" height="21"/>
+                                                        <rect key="frame" x="15" y="13" width="290" height="21"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fby-Hg-ktR">
-                                                        <rect key="frame" x="10" y="42" width="301" height="22"/>
+                                                        <rect key="frame" x="15" y="42" width="290" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -151,14 +151,14 @@
                                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tfV-mK-lEW">
-                                                <rect key="frame" x="9" y="86" width="301" height="111"/>
+                                                <rect key="frame" x="15" y="92" width="290" height="111"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" id="9P3-qc-0Xi">
-                                                <rect key="frame" x="0.0" y="92" width="320" height="450"/>
+                                                <rect key="frame" x="0.0" y="130" width="320" height="450"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="time-slider-background.png" id="4Qa-rT-z0y">
@@ -259,6 +259,134 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-book.png" id="Wgc-yg-bpt">
+                                                <rect key="frame" x="15" y="343" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-music.png" id="ns7-72-clx">
+                                                <rect key="frame" x="15" y="317" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-other.png" id="SlD-eK-wej">
+                                                <rect key="frame" x="15" y="368" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-child.png" id="Z9P-TV-Vkv">
+                                                <rect key="frame" x="15" y="247" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-clothes.png" id="TgW-QB-U4U">
+                                                <rect key="frame" x="15" y="234" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Offering" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kAL-Lx-Ko8">
+                                                <rect key="frame" x="15" y="208" width="61" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-furniture.png" id="t5O-Hn-DhV">
+                                                <rect key="frame" x="15" y="261" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-house.png" id="XSs-4f-yMw">
+                                                <rect key="frame" x="15" y="275" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-movies.png" id="Mqa-vh-bPU">
+                                                <rect key="frame" x="15" y="331" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-repair.png" id="iHd-sO-pAZ">
+                                                <rect key="frame" x="15" y="357" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-toys.png" id="IH2-8A-GzN">
+                                                <rect key="frame" x="15" y="289" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" image="cat-tech.png" id="SV3-Rc-RLG">
+                                                <rect key="frame" x="15" y="303" width="16" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Clothes and accessories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q6B-TL-8AA">
+                                                <rect key="frame" x="39" y="231" width="186" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Children's clothing and accessories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ynS-Pb-6CV">
+                                                <rect key="frame" x="39" y="244" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Furniture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v7F-ec-rgd">
+                                                <rect key="frame" x="39" y="258" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Household accessories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3N8-fb-24k">
+                                                <rect key="frame" x="39" y="272" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Toys and games" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yUF-SN-oyX">
+                                                <rect key="frame" x="39" y="286" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Technology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZLt-c6-dLz">
+                                                <rect key="frame" x="39" y="300" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z2x-m3-o1V">
+                                                <rect key="frame" x="39" y="314" width="266" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Movies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jbe-0c-TwD">
+                                                <rect key="frame" x="39" y="328" width="266" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Books" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VOD-55-ab5">
+                                                <rect key="frame" x="39" y="341" width="266" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Repair services" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zej-Ld-V6N">
+                                                <rect key="frame" x="39" y="355" width="266" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Other" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YtO-ZL-FVD">
+                                                <rect key="frame" x="39" y="367" width="266" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
@@ -274,6 +402,29 @@
                         <outlet property="addressText" destination="Fby-Hg-ktR" id="WAx-3g-w7y"/>
                         <outlet property="buttonLinkToEvent" destination="VE8-6x-TRt" id="ZWh-1D-ior"/>
                         <outlet property="buttonShareEvent" destination="MCO-KU-PBU" id="ztC-hL-LVg"/>
+                        <outlet property="cat0pic" destination="TgW-QB-U4U" id="ej1-2Y-TDQ"/>
+                        <outlet property="cat0text" destination="Q6B-TL-8AA" id="FKX-ga-iCU"/>
+                        <outlet property="cat1pic" destination="Z9P-TV-Vkv" id="pCc-EU-IR4"/>
+                        <outlet property="cat1text" destination="ynS-Pb-6CV" id="jGc-xh-oEt"/>
+                        <outlet property="cat2pic" destination="t5O-Hn-DhV" id="DyI-X3-zgn"/>
+                        <outlet property="cat2text" destination="v7F-ec-rgd" id="U6d-mi-f0v"/>
+                        <outlet property="cat3pic" destination="XSs-4f-yMw" id="fK2-o1-IrS"/>
+                        <outlet property="cat3text" destination="3N8-fb-24k" id="9cA-0k-fT9"/>
+                        <outlet property="cat4pic" destination="IH2-8A-GzN" id="bMg-CP-nRk"/>
+                        <outlet property="cat4text" destination="yUF-SN-oyX" id="ZnL-P5-Lmz"/>
+                        <outlet property="cat5pic" destination="SV3-Rc-RLG" id="tI8-Jy-6NA"/>
+                        <outlet property="cat5text" destination="ZLt-c6-dLz" id="ylh-Rb-Uxj"/>
+                        <outlet property="cat6pic" destination="ns7-72-clx" id="YmY-hj-WxK"/>
+                        <outlet property="cat6text" destination="z2x-m3-o1V" id="R25-ux-z71"/>
+                        <outlet property="cat7pic" destination="Mqa-vh-bPU" id="Mw6-iu-0IH"/>
+                        <outlet property="cat7text" destination="jbe-0c-TwD" id="10V-sV-n32"/>
+                        <outlet property="cat8pic" destination="Wgc-yg-bpt" id="pXH-pW-R1m"/>
+                        <outlet property="cat8text" destination="VOD-55-ab5" id="b4O-c5-U0u"/>
+                        <outlet property="cat9pic" destination="iHd-sO-pAZ" id="DvF-fk-UQX"/>
+                        <outlet property="cat9text" destination="zej-Ld-V6N" id="rNx-c0-XFf"/>
+                        <outlet property="catNpic" destination="SlD-eK-wej" id="hXz-Td-EOH"/>
+                        <outlet property="catNtext" destination="YtO-ZL-FVD" id="Xz9-9l-ZPe"/>
+                        <outlet property="catText" destination="kAL-Lx-Ko8" id="NX1-Bh-zgJ"/>
                         <outlet property="eventDescriptionField" destination="tfV-mK-lEW" id="WSR-7p-Dya"/>
                         <outlet property="headerView" destination="RYe-ha-qIb" id="IrD-Yb-5sX"/>
                         <outlet property="infoContainer" destination="YNf-Uf-LEr" id="fIE-RR-AUo"/>
@@ -621,13 +772,37 @@
             </objects>
             <point key="canvasLocation" x="709" y="1212"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="bV8-Ru-yLn">
+            <objects>
+                <viewController id="Hhj-5C-Deh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SoK-hF-KNH">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2uw-gN-7XW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="aalto-logo.png" width="280" height="52"/>
         <image name="bt-link.png" width="17" height="16"/>
         <image name="bt-share.png" width="19" height="15"/>
         <image name="button-background.png" width="145" height="40"/>
+        <image name="cat-book.png" width="12" height="16"/>
+        <image name="cat-child.png" width="16" height="16"/>
+        <image name="cat-clothes.png" width="16" height="12"/>
+        <image name="cat-furniture.png" width="16" height="11"/>
+        <image name="cat-house.png" width="16" height="13"/>
         <image name="cat-labels.png" width="16" height="13"/>
+        <image name="cat-movies.png" width="16" height="11"/>
+        <image name="cat-music.png" width="13" height="16"/>
+        <image name="cat-other.png" width="9" height="16"/>
+        <image name="cat-repair.png" width="16" height="16"/>
+        <image name="cat-tech.png" width="16" height="14"/>
+        <image name="cat-toys.png" width="13" height="16"/>
         <image name="icon-distance.png" width="16" height="16"/>
         <image name="icon-time.png" width="16" height="16"/>
         <image name="info-bg.png" width="320" height="78"/>
@@ -640,6 +815,112 @@
         <image name="time-slider-background.png" width="320" height="40"/>
         <image name="time-slider.png" width="134" height="10"/>
     </resources>
+    <classes>
+        <class className="BasicNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicNavigationBar.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myMainNavigationBar" candidateClass="UINavigationBar"/>
+            </relationships>
+        </class>
+        <class className="CustomUITabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomUITabBarController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendPost:"/>
+                <relationship kind="outlet" name="addressText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="buttonLinkToEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonShareEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cat0pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat0text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat1pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat1text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat2pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat2text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat3pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat3text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat4pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat4text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat5pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat5text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat6pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat6text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat7pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat7text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat8pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat8text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cat9pic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cat9text" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="catNpic" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="catNtext" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="catText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eventDescriptionField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mainNaviagtionTitle" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timeInfoView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="timeLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel5" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel6" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel7" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeSlider" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshButton:"/>
+                <relationship kind="action" name="updateUserLocation:"/>
+                <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="InfoScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoScreenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="InfoTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="LabelAaltoF" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelSWD" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelTHT" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="LabelUID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labeldev1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labeldev2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labelothers" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Labelothers2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contentScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="MainListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="eventListTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WebLinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebLinkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

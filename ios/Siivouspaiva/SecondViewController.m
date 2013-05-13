@@ -138,8 +138,8 @@
     eventCoordinate.latitude = (CLLocationDegrees)[event.latitude doubleValue];
     CLLocation* eventLocation = [[CLLocation alloc] initWithLatitude:eventCoordinate.latitude longitude:eventCoordinate.longitude];
     CLLocationDistance eventDistance = [eventLocation distanceFromLocation: userLocation];
-    NSLog(@"eventDistance: %f", round(eventDistance));
-    NSLog(@"eventDistance: %f", round(eventDistance/50)*50);
+    //NSLog(@"eventDistance: %f", round(eventDistance));
+    //NSLog(@"eventDistance: %f", round(eventDistance/50)*50);
     if (eventDistance > 950) {
         cell.distanceLabel.text = [NSString stringWithFormat:@"%.1f km", round(eventDistance/100)/10];
     } else {
