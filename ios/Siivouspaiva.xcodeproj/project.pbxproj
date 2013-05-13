@@ -900,12 +900,12 @@
 		1FDC3FA516FD2E8200465AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fabian Haeusler (CG9ZPG8CAB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fabian Haeusler (RT47557R7R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6974A00E-A6BA-4BF0-9122-86510FD1975C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4108D6E-EED8-470E-8D68-8016E17F6A99";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
