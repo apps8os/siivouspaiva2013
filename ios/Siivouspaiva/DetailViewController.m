@@ -68,7 +68,7 @@
     //headerView.frame.size.height = infoContainer.frame.origin.y+infoContainer.frame.size.height;
     
     
-    // star Button
+    /* star Button
     UIButton *starButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *starButtonImage = [UIImage imageNamed:@"icon-star-line"];
     UIImage *starButtonImagePressed = [UIImage imageNamed:@"icon-star-line-active"];
@@ -80,7 +80,7 @@
     starButtonView.bounds = CGRectOffset(starButtonView.bounds, -5, 0);
     [starButtonView addSubview:starButton];
     UIBarButtonItem *starButtonItem = [[UIBarButtonItem alloc] initWithCustomView:starButtonView];
-    self.navigationItem.rightBarButtonItem = starButtonItem;
+    self.navigationItem.rightBarButtonItem = starButtonItem;*/
      
     self.catText.font = [UIFont fontWithName:@"colaborate-bold" size:15];
     self.cat0text.font = [UIFont fontWithName:@"colaborate-regular" size:15];
