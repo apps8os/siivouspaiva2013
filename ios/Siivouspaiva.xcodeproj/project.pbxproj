@@ -889,10 +889,12 @@
 		1FDC3FA416FD2E8200465AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fabian Haeusler (RT47557R7R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E86D05E3-9E7A-4141-B25E-475FE68CCF5D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -900,12 +902,12 @@
 		1FDC3FA516FD2E8200465AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fabian Haeusler (RT47557R7R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4108D6E-EED8-470E-8D68-8016E17F6A99";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
