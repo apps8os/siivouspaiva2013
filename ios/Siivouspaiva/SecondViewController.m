@@ -53,12 +53,19 @@
     [locationManager stopUpdatingLocation];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [eventListTable deselectRowAtIndexPath:[eventListTable indexPathForSelectedRow] animated:YES];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 - (void) eventDidFire:(NSNotification *)note {
     id obj = [note object];
@@ -132,7 +139,6 @@
     
     
     // Distance Label
-    
     CLLocationCoordinate2D eventCoordinate;
     eventCoordinate.longitude = (CLLocationDegrees)[event.longitude doubleValue];
     eventCoordinate.latitude = (CLLocationDegrees)[event.latitude doubleValue];
@@ -179,6 +185,5 @@
         ((DetailViewController*)segue.destinationViewController).detailEvent = eventToSend;
     }
 }
-
 
 @end
