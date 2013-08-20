@@ -35,6 +35,8 @@
 		1F4B159F170CADB100B849B2 /* bt-share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B1599170CADB100B849B2 /* bt-share@2x.png */; };
 		1F4B15A0170CADB100B849B2 /* button-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B159A170CADB100B849B2 /* button-background.png */; };
 		1F4B15A1170CADB100B849B2 /* button-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4B159B170CADB100B849B2 /* button-background@2x.png */; };
+		1F4F9C0B17C34CDB00F3AF9C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */; };
+		1F4F9C0D17C34D0F00F3AF9C /* AskingPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */; };
 		1F5677D81700C0A000180A39 /* navigation-controller.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D61700C0A000180A39 /* navigation-controller.png */; };
 		1F5677D91700C0A000180A39 /* navigation-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677D71700C0A000180A39 /* navigation-controller@2x.png */; };
 		1F5677DB1700C26D00180A39 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5677DA1700C26D00180A39 /* empty.png */; };
@@ -196,6 +198,8 @@
 		1F4B1599170CADB100B849B2 /* bt-share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bt-share@2x.png"; path = "Siivouspaiva/graphics/bt-share@2x.png"; sourceTree = "<group>"; };
 		1F4B159A170CADB100B849B2 /* button-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-background.png"; path = "Siivouspaiva/graphics/button-background.png"; sourceTree = "<group>"; };
 		1F4B159B170CADB100B849B2 /* button-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-background@2x.png"; path = "Siivouspaiva/graphics/button-background@2x.png"; sourceTree = "<group>"; };
+		1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AskingPoint.framework; sourceTree = "<group>"; };
 		1F5677D61700C0A000180A39 /* navigation-controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller.png"; path = "Siivouspaiva/graphics/navigation-controller.png"; sourceTree = "<group>"; };
 		1F5677D71700C0A000180A39 /* navigation-controller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-controller@2x.png"; path = "Siivouspaiva/graphics/navigation-controller@2x.png"; sourceTree = "<group>"; };
 		1F5677DA1700C26D00180A39 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = Siivouspaiva/graphics/empty.png; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4F9C0B17C34CDB00F3AF9C /* AdSupport.framework in Frameworks */,
 				1F7236CA1712B62300349A34 /* SystemConfiguration.framework in Frameworks */,
 				1FECE74E17021B8C00B823A0 /* QuartzCore.framework in Frameworks */,
 				1FDC3FD816FE220900465AA2 /* MapKit.framework in Frameworks */,
@@ -340,6 +345,7 @@
 				1FDC3F7916FD2E8100465AA2 /* UIKit.framework in Frameworks */,
 				1FDC3F7B16FD2E8100465AA2 /* Foundation.framework in Frameworks */,
 				1FDC3F7D16FD2E8100465AA2 /* CoreGraphics.framework in Frameworks */,
+				1F4F9C0D17C34D0F00F3AF9C /* AskingPoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +520,7 @@
 		1FDC3F6C16FD2E8100465AA2 = {
 			isa = PBXGroup;
 			children = (
+				1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */,
 				1FDC3F7E16FD2E8100465AA2 /* Siivouspaiva */,
 				1FDC3F7716FD2E8100465AA2 /* Frameworks */,
 				1FDC3F7616FD2E8100465AA2 /* Products */,
@@ -531,6 +538,7 @@
 		1FDC3F7716FD2E8100465AA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */,
 				1F7236C91712B62200349A34 /* SystemConfiguration.framework */,
 				1FECE74D17021B8C00B823A0 /* QuartzCore.framework */,
 				1FDC3FD716FE220900465AA2 /* MapKit.framework */,
@@ -890,6 +898,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Fabian Haeusler (RT47557R7R)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
@@ -904,6 +916,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";

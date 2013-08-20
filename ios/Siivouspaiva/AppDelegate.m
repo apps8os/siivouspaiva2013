@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "spSingleEvent.h"
+#import <AskingPoint/AskingPoint.h>
 
 @interface AppDelegate (private)
 
@@ -19,6 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Tracking
+    // [APManager startup:@"YQANABMEUjb8Qj6wPOy_qj0c_9JaZVmNV3jU5gWXQBA="];
+    
+    
     // Override point for customization after application launch.
     NSLog(@"Finished launching");
     self.events = [NSMutableArray array];
