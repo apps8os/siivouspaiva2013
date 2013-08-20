@@ -417,14 +417,6 @@ calloutAccessoryControlTapped:(UIControl *)control
 
 
 #pragma mark - Segues
-/*
--(void)showDetails:(id)sender
-{
-    NSLog(@"button clicked, sender-id: %@", sender );
-    
-    //[self performSegueWithIdentifier: @"goToDetailView" sender: self];
-}
- */
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
