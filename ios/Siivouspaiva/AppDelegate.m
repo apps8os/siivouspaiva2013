@@ -128,7 +128,6 @@
         NSData *responseData = [NSURLConnection sendSynchronousRequest:request
                                                      returningResponse:&response
                                                                  error:&error];
-        
         NSArray* eventLocations = [NSJSONSerialization
                                    JSONObjectWithData:responseData
                                    options:kNilOptions
@@ -178,76 +177,11 @@
         //NSLog(@"Event added with ID: %@",newEvent.idNumber);
         //NSLog(@"Event tags: %@",newEvent.tags);
     }
-    
-    //NSLog(@"Last Event ext ID: %@", [self.events.lastObject idNumber]);
-    
+        
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
 
 }
 
-
-/*
-
-#pragma mark Persitent State
-- (NSURL*)applicationDataDirectory {
-    NSFileManager* sharedFM = [NSFileManager defaultManager];
-    NSArray* possibleURLs = [sharedFM URLsForDirectory:NSApplicationSupportDirectory
-                                             inDomains:NSUserDomainMask];
-    NSURL* appSupportDir = nil;
-    NSURL* appDirectory = nil;
-    
-    if ([possibleURLs count] >= 1) {
-        // Use the first directory (if multiple are returned)
-        appSupportDir = [possibleURLs objectAtIndex:0];
-    }
-    
-    // If a valid app support directory exists, add the
-    // app's bundle ID to it to specify the final directory.
-    if (appSupportDir) {
-        NSString* appBundleID = [[NSBundle mainBundle] bundleIdentifier];
-        appDirectory = [appSupportDir URLByAppendingPathComponent:appBundleID];
-    }
-    
-    return appDirectory;
-}
-
-- (NSString*) pathToSavedEvents{
-    NSURL *applicationSupportURL = [self applicationDataDirectory];
-    
-    if (! [[NSFileManager defaultManager] fileExistsAtPath:[applicationSupportURL path]]){
-        
-        NSError *error = nil;
-        
-        [[NSFileManager defaultManager] createDirectoryAtPath:[applicationSupportURL path]
-                                  withIntermediateDirectories:YES
-                                                   attributes:nil
-                                                        error:&error];
-        
-        if (error){
-            NSLog(@"error creating app support dir: %@", error);
-        }
-        
-    }
-    NSString *path = [[applicationSupportURL path] stringByAppendingPathComponent:@"savedEvents.plist"];
-    
-    return path;
-}
-
-- (void) loadEvents{
-    
-    NSString *path = [self pathToSavedEvents];
-    NSLog(@"loadFeeds: %@", path);
-    
-    //self.feeds = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-}
-
-
-- (void) saveEvents{
-    //[NSKeyedArchiver archiveRootObject:self.feeds toFile:[self pathToSavedEvents]];
-}
-
-
-*/
 @end

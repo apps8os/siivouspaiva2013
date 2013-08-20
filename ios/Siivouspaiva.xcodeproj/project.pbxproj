@@ -150,7 +150,6 @@
 		1FDC3FA816FD2ED600465AA2 /* eventSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC3FA616FD2ED600465AA2 /* eventSpot.m */; };
 		1FDC3FD616FE220300465AA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD516FE220300465AA2 /* CoreLocation.framework */; };
 		1FDC3FD816FE220900465AA2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDC3FD716FE220900465AA2 /* MapKit.framework */; };
-		1FECE74C17021A8D00B823A0 /* CustomSegueLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */; };
 		1FECE74E17021B8C00B823A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FECE74D17021B8C00B823A0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -327,8 +326,6 @@
 		1FDC3FA716FD2ED600465AA2 /* eventSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventSpot.h; sourceTree = "<group>"; };
 		1FDC3FD516FE220300465AA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1FDC3FD716FE220900465AA2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegueLeft.h; sourceTree = "<group>"; };
-		1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegueLeft.m; sourceTree = "<group>"; };
 		1FECE74D17021B8C00B823A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -520,7 +517,6 @@
 		1FDC3F6C16FD2E8100465AA2 = {
 			isa = PBXGroup;
 			children = (
-				1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */,
 				1FDC3F7E16FD2E8100465AA2 /* Siivouspaiva */,
 				1FDC3F7716FD2E8100465AA2 /* Frameworks */,
 				1FDC3F7616FD2E8100465AA2 /* Products */,
@@ -538,6 +534,7 @@
 		1FDC3F7716FD2E8100465AA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */,
 				1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */,
 				1F7236C91712B62200349A34 /* SystemConfiguration.framework */,
 				1FECE74D17021B8C00B823A0 /* QuartzCore.framework */,
@@ -556,8 +553,6 @@
 				1FDC3F8716FD2E8100465AA2 /* AppDelegate.h */,
 				1FDC3F8816FD2E8100465AA2 /* AppDelegate.m */,
 				1F6568161705D6B10071930F /* Controller */,
-				1FECE74A17021A8C00B823A0 /* CustomSegueLeft.h */,
-				1FECE74B17021A8D00B823A0 /* CustomSegueLeft.m */,
 				1FB3CC5316FE47BE0020026A /* Graphics */,
 				1FDC3F9016FD2E8200465AA2 /* MainStoryboard.storyboard */,
 				1F6568141705D6A30071930F /* Model */,
@@ -805,7 +800,6 @@
 				1F1E234917009AE600312AE3 /* ThirdViewController.m in Sources */,
 				1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */,
 				1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */,
-				1FECE74C17021A8D00B823A0 /* CustomSegueLeft.m in Sources */,
 				1F6568191705E2950071930F /* spSingleEvent.m in Sources */,
 				1F66CFAA170B1CD800E23FF7 /* BasicNavigationBar.m in Sources */,
 				1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */,
@@ -905,6 +899,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E86D05E3-9E7A-4141-B25E-475FE68CCF5D";
 				WRAPPER_EXTENSION = app;
@@ -923,6 +918,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Siivouspaiva/Siivouspaiva-Prefix.pch";
 				INFOPLIST_FILE = "Siivouspaiva/Siivouspaiva-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
