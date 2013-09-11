@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="urh-XV-Yf3">
-                                <rect key="frame" x="0.0" y="57" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="455"/>
                             </mapView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iog-1p-8uP">
                                 <rect key="frame" x="15" y="19" width="40" height="40"/>
@@ -158,7 +158,7 @@
                                                 <rect key="frame" x="0.0" y="130" width="320" height="450"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="time-slider-background.png" id="4Qa-rT-z0y">
+                                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="time-slider-background" id="4Qa-rT-z0y">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                     </imageView>
@@ -218,7 +218,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MCO-KU-PBU">
                                                         <rect key="frame" x="22" y="48" width="121" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                        <state key="normal" title=" Share" image="bt-share.png" backgroundImage="button-background.png">
+                                                        <state key="normal" title=" Share" image="bt-share" backgroundImage="button-background">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -229,7 +229,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VE8-6x-TRt">
                                                         <rect key="frame" x="177" y="48" width="121" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                        <state key="normal" title=" Website" image="bt-link.png" backgroundImage="button-background.png">
+                                                        <state key="normal" title=" Website" image="bt-link" backgroundImage="button-background">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -527,15 +527,15 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" image="cat-labels.png" id="Ia8-ss-1Wg">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="cat-labels" id="Ia8-ss-1Wg">
                                                     <rect key="frame" x="14" y="37" width="16" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-time.png" id="Tt0-vn-nFx">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-time" id="Tt0-vn-nFx">
                                                     <rect key="frame" x="14" y="63" width="16" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-distance.png" id="YDz-Xj-6nB">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" image="icon-distance" id="YDz-Xj-6nB">
                                                     <rect key="frame" x="185" y="61" width="16" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -650,11 +650,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="bottom" image="info-bg.png" id="GeH-fE-N0K">
+                                    <imageView userInteractionEnabled="NO" contentMode="bottom" image="info-bg" id="GeH-fE-N0K">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="siivouspaiva-logo.png" id="qdo-1t-zqq">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="siivouspaiva-logo" id="qdo-1t-zqq">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
@@ -668,7 +668,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="aalto-logo.png" id="p59-dG-8et">
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="aalto-logo" id="p59-dG-8et">
                                         <rect key="frame" x="20" y="416" width="280" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
@@ -756,32 +756,33 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aalto-logo.png" width="280" height="52"/>
-        <image name="bt-link.png" width="17" height="16"/>
-        <image name="bt-share.png" width="19" height="15"/>
-        <image name="button-background.png" width="145" height="40"/>
+        <image name="aalto-logo" width="280" height="52"/>
+        <image name="bt-link" width="17" height="16"/>
+        <image name="bt-share" width="19" height="15"/>
+        <image name="button-background" width="145" height="40"/>
+        <image name="button-background" width="145" height="40"/>
         <image name="cat-book.png" width="12" height="16"/>
         <image name="cat-child.png" width="16" height="16"/>
         <image name="cat-clothes.png" width="16" height="12"/>
         <image name="cat-furniture.png" width="16" height="11"/>
         <image name="cat-house.png" width="16" height="13"/>
-        <image name="cat-labels.png" width="16" height="13"/>
+        <image name="cat-labels" width="16" height="13"/>
         <image name="cat-movies.png" width="16" height="11"/>
         <image name="cat-music.png" width="13" height="16"/>
         <image name="cat-other.png" width="9" height="16"/>
         <image name="cat-repair.png" width="16" height="16"/>
         <image name="cat-tech.png" width="16" height="14"/>
         <image name="cat-toys.png" width="13" height="16"/>
-        <image name="icon-distance.png" width="16" height="16"/>
-        <image name="icon-time.png" width="16" height="16"/>
-        <image name="info-bg.png" width="320" height="78"/>
+        <image name="icon-distance" width="16" height="16"/>
+        <image name="icon-time" width="16" height="16"/>
+        <image name="info-bg" width="320" height="78"/>
         <image name="line-shadow.png" width="320" height="1"/>
         <image name="locate.png" width="40" height="40"/>
         <image name="reload.png" width="40" height="40"/>
-        <image name="siivouspaiva-logo.png" width="230" height="47"/>
+        <image name="siivouspaiva-logo" width="230" height="47"/>
         <image name="tabicon-list.png" width="33" height="30"/>
         <image name="tabicon-map.png" width="33" height="30"/>
-        <image name="time-slider-background.png" width="320" height="40"/>
+        <image name="time-slider-background" width="320" height="40"/>
         <image name="time-slider.png" width="134" height="10"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
