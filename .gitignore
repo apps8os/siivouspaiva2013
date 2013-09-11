@@ -3,3 +3,5 @@ ios/.DS_Store
 
 ios/Siivouspaiva.xcodeproj/project.xcworkspace/xcuserdata/fabian.xcuserdatad/UserInterfaceState.xcuserstate
 ios/Siivouspaiva/.DS_Store
+
+*.xcuserstate
