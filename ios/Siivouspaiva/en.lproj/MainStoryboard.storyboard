@@ -760,7 +760,6 @@
         <image name="bt-link" width="17" height="16"/>
         <image name="bt-share" width="19" height="15"/>
         <image name="button-background" width="145" height="40"/>
-        <image name="button-background" width="145" height="40"/>
         <image name="cat-book.png" width="12" height="16"/>
         <image name="cat-child.png" width="16" height="16"/>
         <image name="cat-clothes.png" width="16" height="12"/>
