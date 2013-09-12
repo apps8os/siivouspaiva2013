@@ -291,9 +291,9 @@
     }
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *backBtnImage = [UIImage imageNamed:@"icon-back.png"]  ;
+    UIImage *backBtnImage = [UIImage imageNamed:@"icon-back"]  ;
     [backBtn setBackgroundImage:backBtnImage forState:UIControlStateNormal];
-    UIImage *backBtnActiveImage = [UIImage imageNamed:@"icon-back-active.png"]  ;
+    UIImage *backBtnActiveImage = [UIImage imageNamed:@"icon-back-active"]  ;
     [backBtn setBackgroundImage:backBtnActiveImage forState:UIControlStateHighlighted];
     [backBtn addTarget:self action:@selector(goback) forControlEvents:UIControlEventTouchUpInside];
     backBtn.frame = CGRectMake(0, 0, 40, 44);
@@ -325,7 +325,7 @@
     MKAnnotationView *a = [ [ MKAnnotationView alloc ] initWithAnnotation:newAnnotation reuseIdentifier:@"currentloc"];
     if ( a == nil )
         a = [ [ MKAnnotationView alloc ] initWithAnnotation:newAnnotation reuseIdentifier: @"currentloc" ];
-    a.image = [ UIImage imageNamed:@"map-marker.png" ];
+    a.image = [ UIImage imageNamed:@"map-marker" ];
     return a;
 }
 
@@ -334,7 +334,7 @@
 {
     NSArray *activityItems;
     NSString *shareText = [NSString stringWithFormat:@"Join the Siivouspäivä event: %@ in %@", self.detailEvent.eventName, self.detailEvent.eventAddress];
-    UIImage *shareImage = [UIImage imageNamed:@"siivouspaiva-logo.png"];
+    UIImage *shareImage = [UIImage imageNamed:@"siivouspaiva-logo"];
     activityItems = @[shareText, shareImage];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];

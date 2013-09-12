@@ -354,7 +354,7 @@
         pinView.canShowCallout = YES;
         pinView.animatesDrop = YES;
         pinView.enabled = YES;
-        pinView.image = [UIImage imageNamed:@"map-marker.png"];
+        pinView.image = [UIImage imageNamed:@"map-marker"];
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         
         return pinView;
@@ -395,7 +395,7 @@
                 
                 annotationView.rightCalloutAccessoryView = btnDetailRight;
                 //[annotationView bringSubviewToFront:annotationView.rightCalloutAccessoryView];
-                annotationView.image = [UIImage imageNamed:@"map-marker.png"];
+                annotationView.image = [UIImage imageNamed:@"map-marker"];
             } else {
                 annotationView.annotation = annotation;
             }

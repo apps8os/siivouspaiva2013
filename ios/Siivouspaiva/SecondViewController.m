@@ -41,7 +41,7 @@
     NSLog(@"eventsData:List: %lu", (unsigned long)[self.eventsData count]);
     
     // Title bar image
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva"]];
     
     // locationManager update as location
     locationManager = [[CLLocationManager alloc] init];
