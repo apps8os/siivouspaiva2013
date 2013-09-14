@@ -180,11 +180,10 @@
         //NSLog(@"Event added with ID: %@",newEvent.idNumber);
         //NSLog(@"Event tags: %@",newEvent.tags);
     }
-        
-    NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
 
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
+    [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
 }
 
 #pragma mark - global UI modification

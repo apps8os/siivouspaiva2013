@@ -13,6 +13,11 @@
 #import "AppDelegate.h"
 #import "spSingleEvent.h"
 
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 @interface FirstViewController ()
 @property (strong) NSMutableArray *eventsData;
@@ -52,7 +57,7 @@
     
     
     // Siivouspaiva logo as Navigation Bar Title
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon-siivouspaiva"]];
 
     // locate Button
     UIButton *locateButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -66,8 +71,20 @@
     locateButtonView.bounds = CGRectOffset(locateButtonView.bounds, -5, 0);
     [locateButtonView addSubview:locateButton];
     UIBarButtonItem *locateButtonItem = [[UIBarButtonItem alloc] initWithCustomView:locateButtonView];
-    self.navigationItem.rightBarButtonItem = locateButtonItem;
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        self.navigationItem.rightBarButtonItem = locateButtonItem;
+    } else {
+        // Create a negative spacer to go to the left of our custom back button,
+        // and pull it right to the edge:
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                           target:nil action:nil];
+        negativeSpacer.width = -10; // Note: We use 5 above b/c that's how many pixels of padding iOS seems to add
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, locateButtonItem, nil];
+    }
 
+    
     
     // customize Back button image
     UIImage *i1 = [UIImage imageNamed:@"icon-back"];
@@ -99,15 +116,14 @@
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    //NSMutableArray *eventsData = appDelegate.events;
     self.eventsData = [NSMutableArray array];
     self.eventsData = appDelegate.events;
     NSLog(@"eventsData count: %lu", (unsigned long)[self.eventsData count]);
     //NSLog(@"Eventsdata total: %@", self.eventsData);
     
-    if (self.didFinishLoadingMap == YES) {
+    //if (self.didFinishLoadingMap == YES) {
         [self updateAnnotations];
-    }
+    //}
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -127,7 +143,7 @@
     NSLog(@"Finished map loading");
     if (self.didFinishLoadingMap == NO) {
         self.didFinishLoadingMap = YES;
-        [self updateAnnotations];
+        //[self updateAnnotations];
     }
     
 }
