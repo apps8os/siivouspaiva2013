@@ -20,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // customize global apperance
+    [self customizeInterface];
+    
     // Tracking
     // [APManager startup:@"YQANABMEUjb8Qj6wPOy_qj0c_9JaZVmNV3jU5gWXQBA="];
     
@@ -113,7 +116,7 @@
     
     NSString *jsonData = [NSString stringWithFormat:@"um=-90&uM=90&vm=-180&vM=180"];
     NSData *requestData = [jsonData dataUsingEncoding:NSUTF8StringEncoding];
-    NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%d", [requestData length]];
+    NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)[requestData length]];
     [request setValue:requestDataLengthString forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:requestData];
     NSLog(@"Sending Content: %@", requestDataLengthString);
@@ -181,6 +184,20 @@
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
+
+}
+
+#pragma mark - global UI modification
+
+- (void)customizeInterface
+{
+    // NavigationBar BG
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar-bg"] forBarMetrics:UIBarMetricsDefault];
+    
+    // Bottom Tabbar
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar-bg"]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"empty"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"empty"]];
 
 }
 
