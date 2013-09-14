@@ -24,7 +24,6 @@
 		1F4F9C0B17C34CDB00F3AF9C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4F9C0A17C34CDB00F3AF9C /* AdSupport.framework */; };
 		1F4F9C0D17C34D0F00F3AF9C /* AskingPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */; };
 		1F6568191705E2950071930F /* spSingleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6568181705E2950071930F /* spSingleEvent.m */; };
-		1F66CFAA170B1CD800E23FF7 /* BasicNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F66CFA9170B1CD800E23FF7 /* BasicNavigationBar.m */; };
 		1F7236B3171037DE00349A34 /* colaboratebold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236B0171037DE00349A34 /* colaboratebold.ttf */; };
 		1F7236B4171037DE00349A34 /* colaboratelight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236B1171037DE00349A34 /* colaboratelight.ttf */; };
 		1F7236B5171037DE00349A34 /* colaboratemedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F7236B2171037DE00349A34 /* colaboratemedium.ttf */; };
@@ -86,8 +85,6 @@
 		1F4F9C0C17C34D0F00F3AF9C /* AskingPoint.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AskingPoint.framework; sourceTree = "<group>"; };
 		1F6568171705E2950071930F /* spSingleEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spSingleEvent.h; sourceTree = "<group>"; };
 		1F6568181705E2950071930F /* spSingleEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = spSingleEvent.m; sourceTree = "<group>"; };
-		1F66CFA8170B1CD800E23FF7 /* BasicNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicNavigationBar.h; sourceTree = "<group>"; };
-		1F66CFA9170B1CD800E23FF7 /* BasicNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicNavigationBar.m; sourceTree = "<group>"; };
 		1F7236B0171037DE00349A34 /* colaboratebold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = colaboratebold.ttf; path = SupportingFiles/Fonts/colaboratebold.ttf; sourceTree = "<group>"; };
 		1F7236B1171037DE00349A34 /* colaboratelight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = colaboratelight.ttf; path = SupportingFiles/Fonts/colaboratelight.ttf; sourceTree = "<group>"; };
 		1F7236B2171037DE00349A34 /* colaboratemedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = colaboratemedium.ttf; path = SupportingFiles/Fonts/colaboratemedium.ttf; sourceTree = "<group>"; };
@@ -163,8 +160,6 @@
 			children = (
 				1F1E234A1700A16D00312AE3 /* CustomUITabBarController.h */,
 				1F1E234B1700A16D00312AE3 /* CustomUITabBarController.m */,
-				1F66CFA8170B1CD800E23FF7 /* BasicNavigationBar.h */,
-				1F66CFA9170B1CD800E23FF7 /* BasicNavigationBar.m */,
 				1FB75730173AB99A006B8711 /* MainListCell.h */,
 				1FB75731173AB99A006B8711 /* MainListCell.m */,
 			);
@@ -393,7 +388,6 @@
 				1F1E234C1700A16D00312AE3 /* CustomUITabBarController.m in Sources */,
 				1FA317CC1701EDD800E535DA /* DetailViewController.m in Sources */,
 				1F6568191705E2950071930F /* spSingleEvent.m in Sources */,
-				1F66CFAA170B1CD800E23FF7 /* BasicNavigationBar.m in Sources */,
 				1FB32F43170D91FB00E6FEC6 /* WebLinkViewController.m in Sources */,
 				1F7236C81712A22600349A34 /* Reachability.m in Sources */,
 				1FB75732173AB99A006B8711 /* MainListCell.m in Sources */,

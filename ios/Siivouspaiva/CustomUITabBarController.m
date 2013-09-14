@@ -18,9 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    
+	
     [[myTabBar.items objectAtIndex:0] setFinishedSelectedImage:[UIImage imageNamed:@"tabicon-map-active.png"]  withFinishedUnselectedImage:[UIImage imageNamed:@"tabicon-map.png"]];
     [[myTabBar.items objectAtIndex:1] setFinishedSelectedImage:[UIImage imageNamed:@"tabicon-list-active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabicon-list.png"]];
     //[[myTabBar.items objectAtIndex:2] setFinishedSelectedImage:[UIImage imageNamed:@"tabicon-star-active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"tabicon-star.png"]];
