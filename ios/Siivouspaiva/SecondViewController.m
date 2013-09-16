@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTranslucent:NO];
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];

@@ -34,9 +34,9 @@
 
 - (void)viewDidLoad
 {
-    
-    
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     //[self prepareForSegue:[UIStoryboardSegue segueWithIdentifier:@"second" source:self destination:self performHandler:nil] sender:self];
 
@@ -48,8 +48,8 @@
     self.didFinishLoadingMap = NO;
     
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 60.170208;
-    zoomLocation.longitude= 24.938965;
+    zoomLocation.latitude = 60.170108;
+    zoomLocation.longitude= 24.938865;
     self.lastUpdateLocation = zoomLocation;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
@@ -75,12 +75,9 @@
     if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
         self.navigationItem.rightBarButtonItem = locateButtonItem;
     } else {
-        // Create a negative spacer to go to the left of our custom back button,
-        // and pull it right to the edge:
-        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-                                           initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                           target:nil action:nil];
-        negativeSpacer.width = -10; // Note: We use 5 above b/c that's how many pixels of padding iOS seems to add
+        // Create a negative spacer to go to the left of our custom back button, and pull it right to the edge:
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        negativeSpacer.width = -10;
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, locateButtonItem, nil];
     }
 
@@ -173,7 +170,7 @@
 }
 
 - (IBAction)updateUserLocation:(id)sender{
-    NSLog(@"Got to my location");
+    NSLog(@"Go to my location");
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentUserLocation.coordinate, 800, 800);
     [_mapView setRegion:viewRegion animated:YES];
@@ -200,7 +197,7 @@
         if (self.eventsData) {
             [self updateAnnotations];
         }
-    } else if (tempDistance*4 < self.lastUpdateSpan) {
+    } else if (tempDistance*2 < self.lastUpdateSpan) {
         if (self.eventsData) {
             [self updateAnnotations];
         }
@@ -216,112 +213,32 @@
     // get current map view coordinates
     MKCoordinateRegion mapRegion = [_mapView region];
     CLLocationCoordinate2D centerLocation = mapRegion.center;
-    float mapLatMin = centerLocation.latitude - mapRegion.span.latitudeDelta;
-    float mapLatMax = centerLocation.latitude + mapRegion.span.latitudeDelta;
-    float mapLonMin = centerLocation.longitude - mapRegion.span.longitudeDelta;
-    float mapLonMax = centerLocation.longitude + mapRegion.span.longitudeDelta;
+    float mapLatMin = centerLocation.latitude - mapRegion.span.latitudeDelta/1.5;
+    float mapLatMax = centerLocation.latitude + mapRegion.span.latitudeDelta/1.5;
+    float mapLonMin = centerLocation.longitude - mapRegion.span.longitudeDelta/1.5;
+    float mapLonMax = centerLocation.longitude + mapRegion.span.longitudeDelta/1.5;
     
     self.lastUpdateLocation = centerLocation;
     self.lastUpdateSpan = (float) mapRegion.span.latitudeDelta;
     
     //search through data for events on current map view
-    //if (self.eventsData) {
-        NSArray *tempEvents = [self.eventsData copy];
+    //NSArray *tempEvents = [self.eventsData copy];
+    
+    NSMutableArray *mapSpots = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [self.eventsData count]; i++) {
+        float eventLat = [[[self.eventsData objectAtIndex:i] latitude] floatValue];
+        float eventLon = [[[self.eventsData objectAtIndex:i] longitude] floatValue];
         
-        
-        NSMutableArray *mapSpots = [[NSMutableArray alloc] init];
-        for (int i = 0; i < [tempEvents count]; i++) {
-            float eventLat = [[[tempEvents objectAtIndex:i] latitude] floatValue];
-            float eventLon = [[[tempEvents objectAtIndex:i] longitude] floatValue];
-            
-            if (eventLat>mapLatMin && eventLat<mapLatMax && eventLon>mapLonMin && eventLon<mapLonMax) {
-                //NSLog(@"Map match");
-                [mapSpots addObject:[tempEvents objectAtIndex:i]];
-            }
-            //NSLog(@"eventsData data: %@", [[self.eventsData objectAtIndex:i] longitude]);
+        if (eventLat>mapLatMin && eventLat<mapLatMax && eventLon>mapLonMin && eventLon<mapLonMax) {
+            //NSLog(@"Map match");
+            [mapSpots addObject:[self.eventsData objectAtIndex:i]];
         }
-        [self plotEventLocations:mapSpots];
-        NSLog(@"mapspots count: %lu", (unsigned long)[mapSpots count]);
-   // }
-     
+        //NSLog(@"eventsData data: %@", [[self.eventsData objectAtIndex:i] longitude]);
+    }
+    NSLog(@"mapspots count: %lu", (unsigned long)[mapSpots count]);
+    [self plotEventLocations:mapSpots];
     
 }
-/*
-// old getting Data
-- (void)getData
-{
-    // get user map view
-    MKCoordinateRegion mapRegion = [_mapView region];
-    CLLocationCoordinate2D centerLocation = mapRegion.center;
-    float userCoordinateLat1 = centerLocation.latitude - mapRegion.span.latitudeDelta;
-    float userCoordinateLat2 = centerLocation.latitude + mapRegion.span.latitudeDelta;
-    float userCoordinateLon1 = centerLocation.longitude - mapRegion.span.longitudeDelta;
-    float userCoordinateLon2 = centerLocation.longitude + mapRegion.span.longitudeDelta;
-    
-    
-    NSURL *url = [NSURL URLWithString:@"http://siivouspaiva.com/data.php?query=load"];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"POST"];
-    
-    NSString *jsonData = [NSString stringWithFormat:@"um=%f&uM=%f&vm=%f&vM=%f", userCoordinateLat1, userCoordinateLat2, userCoordinateLon1, userCoordinateLon2];
-    NSData *requestData = [jsonData dataUsingEncoding:NSUTF8StringEncoding];
-    NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%d", [requestData length]];
-    [request setValue:requestDataLengthString forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody:requestData];
-    NSLog(@"Sending Content: %@", requestDataLengthString);
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
-    dispatch_async(queue, ^{
-        NSURLResponse *response = nil;
-        NSError *error = nil;
-        
-        NSData *responseData = [NSURLConnection sendSynchronousRequest:request
-                                                     returningResponse:&response
-                                                                 error:&error];
-        
-        NSArray* eventLocations = [NSJSONSerialization
-                                   JSONObjectWithData:responseData
-                                   options:kNilOptions
-                                   error:&error];
-        
-        //[self plotEventLocations:eventLocations];
-    });
-    
-
-    //NSURL *url = [NSURL URLWithString:@"http://siivouspaiva.com/data.php?query=load"];
-    
-    //NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    //[request setHTTPMethod:@"POST"];
-    
-    //all data: @"um=-90&uM=90&vm=-180&vM=180";
-    //NSString *jsonData = [NSString stringWithFormat:@"um=%f&uM=%f&vm=%f&vM=%f", userCoordinateLat1, userCoordinateLat2, userCoordinateLon1, userCoordinateLon2];
-    //NSLog(@"jsonString: %@", jsonData);
-    
-    //NSData *requestData = [jsonData dataUsingEncoding:NSUTF8StringEncoding];
-    //NSString* requestDataLengthString = [[NSString alloc] initWithFormat:@"%d", [requestData length]];
-    //[request setValue:requestDataLengthString forHTTPHeaderField:@"Content-Length"];
-    //[request setHTTPBody:requestData];
-    
-    
-    
-    //NSURLResponse *response = NULL;
-    //NSError *requestError = NULL;
-    
-    //NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&requestError];
-    //NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    //NSError* error;
-    //NSArray* eventLocations = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    //NSLog(@"locations: %@", eventLocations);
-    
-     
-     
-    //[self plotEventLocations:eventLocations];
-    
-
-} */
-
 
 // plotting Events
 - (void)plotEventLocations:(NSArray *)responseData {
@@ -334,7 +251,7 @@
         
     }
     
-    for (int i = 0; i < [responseData count]; i++) {
+    for (int i = 0; i < MIN(130, [responseData count]); i++) {
         //NSDictionary* singleEvent = [[responseData objectAtIndex:i] ];
         
         NSNumber * latitude = [[responseData objectAtIndex:i] latitude];
@@ -342,6 +259,12 @@
         NSString * name = [[responseData objectAtIndex:i] eventName];
         NSString * address = [[responseData objectAtIndex:i] eventAddress];
         NSNumber * identifier = [[responseData objectAtIndex:i] idNumber];
+        /*NSString * name = @"Hello";
+        NSString * address = @"you";
+        NSNumber * identifier = [NSNumber numberWithInt:i];
+        NSNumber * latitude = [NSNumber numberWithFloat:(60.170208+(i/10))];
+        NSNumber * longitude = [NSNumber numberWithFloat:(24.938965+(i/10))]; */
+
         
         //NSLog(@"finished %i", i);
         
@@ -349,13 +272,14 @@
         coordinate.latitude = latitude.doubleValue;
         coordinate.longitude = longitude.doubleValue;
         eventSpot *annotation = [[eventSpot alloc] initWithName:name address:address coordinate:coordinate identifier:identifier];
+        
+        //MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        //annotation.coordinate = coordinate;
+        
         [_mapView addAnnotation:annotation];
         //NSLog(@"Annotation ident: %@", annotation.identi);
     }
     NSLog(@"finished");
-    
-    for (NSArray * row in responseData) {
-    }
 }
 
 /* Uising the MKPinAnnotationView animates PINs but breaks the image replacement

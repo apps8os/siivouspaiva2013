@@ -24,7 +24,7 @@
     [self customizeInterface];
     
     // Tracking
-    // [APManager startup:@"YQANABMEUjb8Qj6wPOy_qj0c_9JaZVmNV3jU5gWXQBA="];
+    //[APManager startup:@"YQANABMEUjb8Qj6wPOy_qj0c_9JaZVmNV3jU5gWXQBA="];
     
     
     // Override point for customization after application launch.
@@ -183,6 +183,7 @@
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSNotificationCenter *note = [NSNotificationCenter defaultCenter];
+    NSLog(@"events count 1: %i", [self.events count]);
     [note postNotificationName:@"finishedDataLoading" object:@"Done dude."];
 }
 

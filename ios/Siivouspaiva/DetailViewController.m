@@ -315,6 +315,9 @@
                                            target:nil action:nil];
         negativeSpacer.width = -10;
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
+        
+        buttonLinkToEvent.tintColor = [UIColor whiteColor];
+        buttonShareEvent.tintColor = [UIColor whiteColor];
     }
 }
 
